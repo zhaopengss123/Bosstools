@@ -1,0 +1,59 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/detail/detail",
+    "pages/index/income/income",
+    "pages/login/login",
+    "pages/member/member",
+    "pages/member/integral/integral",
+    "pages/member/clueDetail/clueDetail",
+    "pages/user/user",
+    "pages/user/messageList/messageList",
+    "pages/store/store",
+    "pages/store/detail/detail",
+    "pages/ask/ask",
+    "pages/index/integral/integral",
+    "pages/index/clueDetail/clueDetail",
+    "pages/index/ask/ask",
+    "pages/index/experience/experience",
+    "pages/index/detail/service/service"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "门店管家",
+    "navigationBarTextStyle":"black"
+  },
+      "tabBar": {
+        "color": "#C2C2C3",
+        "selectedColor": "#5EA3FE",
+        "borderStyle": "black",
+        "backgroundColor": "#fff",
+        "list": [
+          {
+            "selectedIconPath": "assets/images/tabbar-index-active.png",
+            "iconPath": "assets/images/tabbarIndex.png",
+            "pagePath": "pages/index/index",
+            "text": "业绩"
+          },
+          {
+            "selectedIconPath": "assets/images/tabbar-store-active.png",
+            "iconPath": "assets/images/tabbar-store.png",
+            "pagePath": "pages/store/store",
+            "text": "门店"
+          },
+          {
+            "selectedIconPath": "assets/images/tabbar-member-active.png",
+            "iconPath": "assets/images/tabbar-member.png",
+            "pagePath": "pages/member/member",
+            "text": "员工"
+          },          
+          {
+            "selectedIconPath": "assets/images/tabbar-user-active.png",
+            "iconPath": "assets/images/tabbar-user.png",
+            "pagePath": "pages/user/user",
+            "text": "我的"
+          }
+        ]
+      }
+}

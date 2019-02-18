@@ -1,0 +1,27 @@
+<view class='content'>
+    <!-- <view class='header'>
+      <view class="header_left">
+        <canvas class="circle" style=" width:240rpx; height:240rpx;" canvas-id="canvasCircle1"></canvas>
+        <canvas class="circle_p" style=" width:240rpx; height:240rpx;" canvas-id="canvasCircle2"></canvas> 
+         <view class='percentage'>
+            <text >50%</text>
+            <text>已完成</text>
+          </view>     
+      </view>
+      <view class='header_right'>
+            <text>全部办卡任务张数</text>
+            <view>3000</view>
+      </view>
+    </view> -->
+    <view class='main'>
+        <view class='main_header'>
+            <text>总计</text>
+            <text>￥{{ amount }}</text>
+        </view>
+        <view class='main_list'>
+            <view class='list list_tit'> <text>收入类目</text> <text>个数</text> <text>金额</text> </view>
+            <view class='list' wx:for="{{ cardList }}" wx:key="index"> <text>{{ item.item }}</text>  <text>{{ item.cnt }}</text> <text>￥{{ item.total }}</text></view>
+
+        </view>
+    </view>
+</view>

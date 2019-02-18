@@ -1,0 +1,35 @@
+<view class='content'>
+    <view class='header'>
+        <view class='header_tit'>今日实际/任务</view>
+        <view class='header_left'>
+              <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/icon45343545.png'></image>
+              <view class='text'>
+                <view class='left_tit'>回访线索</view>
+                <view class='left_num'>{{ dataList.length }}条</view>
+              </view>
+        </view>
+        <view class='header_left'>
+              <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/icon445453.png'></image>
+              <view class='text'>
+                <view class='left_tit'>已回访线索</view>
+                <view class='left_num'>9条</view>
+              </view>
+        </view>
+    </view>
+    <view class='main'>
+        <view class='teacher_list' wx:for="{{ dataList }}" wx:key="id" wx:if="{{ dataList.length }}">
+        <view class='teacher_text'>
+              <view class='text_top'>
+                  <view class='teacher_name'>{{ item.memberName }}</view>
+              </view>
+        <view class='text_footer' wx:if="{{ dataFlag == 2|| dataFlag == 3 }}"> 获客渠道： {{ item.source}} </view>
+        <view class='text_footer' wx:if="{{ dataFlag == 3 }}"> 客户电话： {{ item.mobilePhone }} </view>
+        <view class='text_footer' wx:if="{{ dataFlag == 1 }}">{{ item.typeName}}</view>
+        <view class='text_footer' wx:if="{{ dataFlag == 1 }}">剩余卡次:  {{ item.surplusCardTime }}</view>
+        </view> 
+        </view>
+        <view class='noData' wx:if="{{ !dataList.length }}">
+          暂无数据
+      </view>
+    </view>
+</view>

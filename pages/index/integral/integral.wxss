@@ -1,0 +1,65 @@
+/* pages/member/integral/integral.wxss */
+page{
+  width: 100%;
+  background: #FAFAFA;
+}
+.integral_total{
+  font-size:100rpx;
+  color: #6C79FB;
+  font-weight: bold;
+  margin: 0 auto;
+  font-style: italic;
+  text-align:  center;
+  height: 122rpx;
+  line-height: 122rpx;
+  margin-top: 40rpx;
+}
+.intefral_text{
+  font-size: 32rpx;
+  color: #222;
+  text-align: center;
+  height: 44rpx;
+  line-height: 44rpx;
+  font-weight: 600;
+}
+.data_list{
+  width: 670rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 40rpx;
+  background: url(https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/lineBg.jpg) repeat-y 6.5rpx;
+  background: 1rpx auto; 
+}
+.data_icon{
+  width: 14rpx;
+  height: 14rpx;
+  background: #eee;
+  border-radius: 50%;
+  float: left;
+  margin-top: 13rpx;
+}
+.data_name{
+  width: auto;
+  float: left;
+  color: #555;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.data_integarl{
+  width: 100rpx;
+  float: right;
+  color:#9B9B9B;
+  font-size: 24rpx;
+}
+.list{
+  margin-top: 40rpx;
+  overflow: hidden;
+}
+.noData{
+  width: 100%;
+  margin-top: 50rpx;
+  text-align: center;
+  color: #ccc;
+}

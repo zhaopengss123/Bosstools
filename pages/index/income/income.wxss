@@ -1,0 +1,122 @@
+/* pages/index/income/income.wxss */
+page{
+  background: #FAFAFA;
+}
+.content{
+  width: 670rpx;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.header_left{
+  width: 240rpx;
+  height: 240rpx;
+  margin-left: 50rpx;
+  margin-top: 40rpx;
+  position: relative;
+  float: left;
+}
+
+.circle_p{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.percentage{
+  width: 240rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 82rpx;
+  left: 0;
+  text-align: center;
+  color: #ACB2FF;
+  font-size: 36rpx;
+}
+.percentage text{
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.percentage text:nth-child(2){
+  color: #999;
+  font-size: 24rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+.header{
+  overflow: hidden;
+}
+.header_right{
+  width: 250rpx;
+  float: right;
+  text-align: right;
+  margin-top: 70rpx;
+}
+.header_right text{
+  color: #999;
+  font-size: 24rpx;
+}
+.header_right view{
+  color: #222222;
+  font-size: 36rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-weight: 600;
+
+}
+.main{
+  width: 608rpx;
+  background:rgba(255,254,254,1);
+  border-radius:10rpx;
+  border:1rpx solid rgba(238,238,238,1);
+  padding: 30rpx;
+  clear: both;
+  margin-top: 40rpx;
+}
+.main_header{
+  height: 62rpx;
+  line-height: 62rpx;
+  color: #555;
+  font-size: 24rpx;
+}
+.main_header text{
+  display: block;
+  float: left;
+  width: 50%;
+  border-bottom: solid 1rpx #eee;
+}
+.main_header text:nth-child(2){
+  text-align: right;
+  font-size: 28rpx;
+  color: #222;
+  font-weight: 600;
+}
+.main_list{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.list{
+  width: 100%;
+  overflow: hidden;
+}
+.list text{
+  width:33%;
+  float: left;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  color: #222;
+}
+.list.list_tit text{
+    font-size: 24rpx;
+  color: #bbb;
+}
+.list text:nth-child(2){
+  width: 33%;
+  text-align: center;
+  margin-right: 10%;
+}
+.list text:nth-child(3){
+  width: 23%;
+  text-align: center;
+}

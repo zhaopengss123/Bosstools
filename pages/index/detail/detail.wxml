@@ -1,0 +1,247 @@
+<view class="content">
+    <view class='month'>{{ month }} <text>{{ year }}</text></view>
+    <view class='date'>
+          <swiper bindchange="selectIndex" current="1"  >
+        <block>
+            <swiper-item >
+             <view class='date_content'>
+                  <view class='date_list {{ selectIndex == 0 ||  selectedDate == dateArr[0] ? "cli" :"" }}' data-index='0' bindtap='selectDate'>
+                        <text>周一</text>
+                        <text >{{ dateList[0] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 1 || selectedDate == dateArr[1] ? "cli" :"" }}'  data-index='1' bindtap='selectDate'>
+                        <text>周二</text>
+                        <text>{{ dateList[1] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 2 || selectedDate == dateArr[2] ? "cli" :"" }}'  data-index='2' bindtap='selectDate'>
+                        <text>周三</text>
+                        <text>{{ dateList[2] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 3 || selectedDate == dateArr[3] ? "cli" :"" }}' data-index='3' bindtap='selectDate'>
+                        <text>周四</text>
+                        <text >{{ dateList[3] }}</text>
+                  </view>  
+                  <view class='date_list {{ selectIndex == 4 || selectedDate == dateArr[4] ? "cli" :"" }}' data-index='4' bindtap='selectDate'>
+                        <text>周五</text>
+                        <text >{{ dateList[4] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 5 || selectedDate == dateArr[5] ? "cli" :"" }}' data-index='5' bindtap='selectDate'>
+                        <text>周六</text>
+                        <text >{{ dateList[5] }}</text>
+                  </view>  
+                  <view class='date_list {{ selectIndex == 6 || selectedDate == dateArr[6] ? "cli" :"" }}' data-index='6' bindtap='selectDate'>
+                        <text>周日</text>
+                        <text >{{ dateList[6] }}</text>
+                  </view>                                                 
+                </view>
+            </swiper-item>
+        </block>
+        <block>
+            <swiper-item >
+             <view class='date_content'>
+                  <view class='date_list {{ selectIndex == 0 ||  selectedDate == dateArr[0] ? "cli" :"" }}' data-index='0' bindtap='selectDate'>
+                        <text>周一</text>
+                        <text >{{ dateList[0] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 1 || selectedDate == dateArr[1] ? "cli" :"" }}'  data-index='1' bindtap='selectDate'>
+                        <text>周二</text>
+                        <text>{{ dateList[1] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 2 || selectedDate == dateArr[2] ? "cli" :"" }}'  data-index='2' bindtap='selectDate'>
+                        <text>周三</text>
+                        <text>{{ dateList[2] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 3 || selectedDate == dateArr[3] ? "cli" :"" }}' data-index='3' bindtap='selectDate'>
+                        <text>周四</text>
+                        <text >{{ dateList[3] }}</text>
+                  </view>  
+                  <view class='date_list {{ selectIndex == 4 || selectedDate == dateArr[4] ? "cli" :"" }}' data-index='4' bindtap='selectDate'>
+                        <text>周五</text>
+                        <text >{{ dateList[4] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 5 || selectedDate == dateArr[5] ? "cli" :"" }}' data-index='5' bindtap='selectDate'>
+                        <text>周六</text>
+                        <text >{{ dateList[5] }}</text>
+                  </view>  
+                  <view class='date_list {{ selectIndex == 6 || selectedDate == dateArr[6] ? "cli" :"" }}' data-index='6' bindtap='selectDate'>
+                        <text>周日</text>
+                        <text >{{ dateList[6] }}</text>
+                  </view>                                                 
+                </view>
+            </swiper-item>
+        </block>
+        <block>
+            <swiper-item >
+             <view class='date_content'>
+                  <view class='date_list {{ selectIndex == 0 ||  selectedDate == dateArr[0] ? "cli" :"" }}' data-index='0' bindtap='selectDate'>
+                        <text>周一</text>
+                        <text >{{ dateList[0] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 1 || selectedDate == dateArr[1] ? "cli" :"" }}'  data-index='1' bindtap='selectDate'>
+                        <text>周二</text>
+                        <text>{{ dateList[1] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 2 || selectedDate == dateArr[2] ? "cli" :"" }}'  data-index='2' bindtap='selectDate'>
+                        <text>周三</text>
+                        <text>{{ dateList[2] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 3 || selectedDate == dateArr[3] ? "cli" :"" }}' data-index='3' bindtap='selectDate'>
+                        <text>周四</text>
+                        <text >{{ dateList[3] }}</text>
+                  </view>  
+                  <view class='date_list {{ selectIndex == 4 || selectedDate == dateArr[4] ? "cli" :"" }}' data-index='4' bindtap='selectDate'>
+                        <text>周五</text>
+                        <text >{{ dateList[4] }}</text>
+                  </view>
+                  <view class='date_list {{ selectIndex == 5 || selectedDate == dateArr[5] ? "cli" :"" }}' data-index='5' bindtap='selectDate'>
+                        <text>周六</text>
+                        <text >{{ dateList[5] }}</text>
+                  </view>  
+                  <view class='date_list {{ selectIndex == 6 || selectedDate == dateArr[6] ? "cli" :"" }}' data-index='6' bindtap='selectDate'>
+                        <text>周日</text>
+                        <text >{{ dateList[6] }}</text>
+                  </view>                                                 
+                </view>
+            </swiper-item>
+        </block>                
+    </swiper>
+    <!-- <view class='date_prve' bindtap='prveDate'>
+       <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/prve.png'></image>
+    </view>
+    <view class='date_next' bindtap='nextDate'>
+            <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/next.png'></image>
+     </view>    -->
+    </view>
+    
+     <view class='teacher_list' >
+      <view class='headImg'> <image src='{{ memberDetail.headImage ? memberDetail.headImage : "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/memberHeading5633.jpg" }}'></image> </view>
+        <view class='teacher_text'>
+        <view class='text_top'>
+            <view class='teacher_name'>{{ memberDetail.teacherName }}</view>
+        </view>
+        <view class='text_center'>
+            <view class='teacher_data'>耗卡 <text>{{ memberDetail.removeCount }}/{{ memberDetail.consumeCard }}</text> </view>
+            <view class='teacher_data'>线索 <text>{{ memberDetail.clueCounts }}/{{ memberDetail.clueNum }}</text> </view>
+            <view class='teacher_data'>体验卡 <text>{{ memberDetail.pravticeCounts }}/{{ memberDetail.experienceNum }}</text> </view>
+            <!-- <view class='teacher_data'>回访 <text>{{ memberDetail.callBackClue }}/{{ memberDetail.expectCallbackClue }}</text> </view>   -->
+        </view>
+        <view class='text_date'>
+            入职时间：{{ memberDetail.joinDate }}
+        </view>
+        <view class='text_date'>
+            好评率：<text>{{ memberDetail.satisfactionRate }}%</text>
+        </view>        
+        </view> 
+    </view>
+    <view class='memberDetail'>
+    <view wx:for="{{ memberDetail.workRecord }}" wx:key="index">
+
+    <!-- 营业前检查 -->
+      <view class='memberDetail_list' wx:if="{{ item.type == 11 }}" >
+        <view class='list-left'>
+            <view class='list-circle'></view>
+        </view>
+        <view class='list-right'>
+            <view class='list-date'>{{ item.startTime }}</view>
+            <view class='list-detail'>
+                <view class='detail_tit'>{{ item.title }}</view>
+                
+                <view class='list_text'>
+                    {{item.content.name}}
+                </view>
+                <view class='list_main'>
+                      <image wx:if="{{ item.content.url.length }}" class='list_list' wx:for="{{ item.content.url }}" wx:for-item="data" wx:key="id" src='{{ data }}' ></image>
+                      <view  wx:if="{{ !item.content.url.length }}" class='list_list'>暂无数据</view>
+                </view>
+            </view>
+        </view>
+      </view> 
+      <!-- 自拍 -->
+      <view class='memberDetail_list' wx:if="{{ item.type == 8 }}">
+        <view class='list-left'>
+            <view class='list-circle'></view>
+        </view>
+        <view class='list-right'>
+            <view class='list-date'>{{ item.startTime }}</view>
+            <view class='list-detail'>
+                <view class='detail_tit'>{{ item.title }}</view>
+                <view class='list_main'>
+                      <image wx:if="{{ item.content.photoUrl.length }}" class='list_list'  src='{{ item.content.photoUrl }}' ></image>
+                      <view  wx:else class='list_list'>暂无数据</view>
+                </view>
+            </view>
+
+        </view>
+      </view>
+
+      <!-- 服务报告 -->
+      <view class='memberDetail_list service' wx:if="{{ item.type == 10 }}">
+        <view class='list-left'>
+            <view class='list-circle'></view>
+        </view>
+        <view class='list-right'>
+            <view class='list-date'>{{ item.startTime }} </view>
+            <view class='list-detail'>
+                <view class='detail_tit'>{{ item.title }}<text wx:if="{{ item.content.id }}" bindtap='navToService' data-id='{{ item.content.id }}'>服务报告</text></view>
+                <view class='line'></view>
+                <view class='service_text'>
+                   服务老师：<text>{{ memberDetail.teacherName }}</text>
+                </view>
+                <view class='service_text'>
+                   <view>评价：</view>
+                   <view class='star'>
+                     <image src='{{ item.content.star >= 1 || !item.content.star ? "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star1.png": "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star2.png"  }}'></image>
+                        <image src='{{ item.content.star >= 2 || !item.content.star ? "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star1.png": "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star2.png"  }}'></image>
+                        <image src='{{ item.content.star >= 3 ? "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star1.png": "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star2.png"  }}'></image>
+                        <image src='{{ item.content.star >= 4 ? "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star1.png": "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star2.png"  }}'></image>
+                        <image src='{{ item.content.star >= 5 ? "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star1.png": "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/star2.png"  }}'></image>
+                             <view class='serice_textarea'>
+                                {{ item.content.assess ? item.content.assess: '服务一般，老师加油' }}
+                            </view>
+                   </view>
+                </view>
+            </view>
+        </view>
+      </view>  
+
+      <!-- 空闲时间任务 -->
+      <view class='memberDetail_list' wx:if="{{ item.type == 12 }}" >
+        <view class='list-left'>
+            <view class='list-circle'></view>
+        </view>
+        <view class='list-right'>
+            <view class='list-date'>{{ item.startTime }} </view>
+            <view class='list-detail'>
+                <view class='detail_tit'>{{ item.title }}</view>
+            </view>
+        </view>
+      </view> 
+    <!-- 整点记录 -->
+    <view class='memberDetail_list' wx:if="{{ item.type == 9 }}" >
+        <view class='list-left'>
+            <view class='list-circle'></view>
+        </view>
+        <view class='list-right'>
+            <view class='list-date'>{{ item.startTime }} </view>
+            <view class='list-detail'>
+                <view class='detail_tit'>整点记录 <text class='zdjl'>水温、室温、水质</text></view>
+                <view class='line'></view>
+                 <view class='service_text'>
+                    水温：<text>{{ item.waterTemperature }}°C</text>
+                </view> 
+                <view class='service_text'>
+                    室温：<text>{{ item.indoorTemperature }}°C</text>
+                </view> 
+                <view class='service_text'>
+                    水质：<text>{{ item.waterTemperature }}</text>
+                </view>                 
+            </view>
+        </view>
+      </view>
+    </view>
+
+
+    
+
+    </view>
+</view>

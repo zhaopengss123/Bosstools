@@ -1,0 +1,88 @@
+/* pages/index/detail/service/service.wxss */
+page{
+  background: #FAFAFA;
+}
+.header{
+  width: 610rpx;
+  overflow: hidden;
+  padding: 30rpx;
+  background: #6988FF;
+  border-radius: 16rpx;
+  box-shadow:0px 0px 8rpx 0px rgba(221,221,221,1);
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.headImg{
+  width: 90rpx;
+  height: 90rpx;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.headText{
+  width: 438rpx;
+  overflow: hidden;
+  float: left;
+  margin-left: 20rpx;
+}
+.userName{
+  height:44rpx;
+font-size:32rpx;
+font-weight:500;
+color:rgba(255,255,255,1);
+line-height:44rpx;
+}
+.labelList{
+  width: auto;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  background:rgba(255,255,255,0.2);
+  float: left;
+  border-radius: 25rpx;
+  color: #fff;
+  font-size: 24rpx;
+  margin: 10rpx 10rpx 0 0;
+}
+.main{
+  margin: 0 auto;
+  width: 670rpx;
+  margin-top: 30rpx;
+}
+.list{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: solid 1rpx #eee;
+}
+.list view{
+  width: 50%;
+  float: left;
+  color: #222222;
+  font-size: 28rpx;
+  line-height: 100rpx;
+}
+.list view:nth-child(2){
+  text-align: right;
+  overflow: hidden;
+}
+.list.list_photo{
+  height: auto;
+  overflow: hidden;
+}
+.list_image.list_image{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 28rpx;
+}
+.list_image image{
+  width: 150rpx;
+  height: 150rpx;
+  float: left;
+  border-radius: 10rpx;
+  margin:10rpx 10rpx 0 0 ;
+}
+

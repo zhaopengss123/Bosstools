@@ -1,0 +1,183 @@
+page{
+  width: 100%;
+  background: #FAFAFA;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.nav{
+  width: 750rpx;
+  overflow: hidden;
+  margin: 0 auto;
+
+  background: #fff;
+}
+.nav_list{
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.nav_name{
+  font-size: 30rpx;
+  color: #bbb;
+  height: 74rpx;
+  line-height: 74rpx;
+}
+.nav_list.cli .nav_icon{
+  width: 50rpx;
+  height: 6rpx;
+  background:#6C79FB ;
+  border-radius: 16rpx;
+  margin: 0 auto;
+}
+.nav_list.cli .nav_name{
+  color: #222;
+}
+.main{
+  width: 670rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  overflow: hidden;
+}
+.main_left{
+  width: 240rpx;
+  margin-left: 50rpx;
+  position: relative;
+}
+.circle_p{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main_header{
+  overflow: hidden;
+}
+.percentage{
+  width: 240rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 82rpx;
+  left: 0;
+  text-align: center;
+  color: #6C79FB;
+  font-size: 36rpx;
+}
+.percentage text{
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.percentage text:nth-child(2){
+  color: #999;
+  font-size: 24rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+.main_left{
+  width: 240rpx;
+  float: left;
+}
+.main_right{
+  width: 300rpx;
+  float: right;
+  text-align: right;
+  color: #999999;
+  font-size: 24rpx;
+}
+.main_right view{
+  height: 36rpx;
+  line-height: 36rpx;
+}
+.main_right text{
+  display: block;
+  color: #222;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 36rpx;
+}
+.main_right view:nth-child(1){
+    margin-top: 30rpx;
+}
+.main_right view:nth-child(3){
+    margin-top: 10rpx;
+}
+.main_main{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40rpx;
+}
+.mainList{
+  padding: 30rpx;
+  overflow: hidden;
+  background: #fff;
+  box-shadow:0px 0px 8px 0px rgba(221,221,221,1);
+  border-radius: 16rpx;
+  background: url(https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/bottom12345.png) no-repeat  615rpx 80rpx #fff ;
+  background-size: 26rpx 12rpx;
+  margin-bottom: 20rpx;
+}
+.mainList.cli{
+  background: url(https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/topicon1.423dsa.png) no-repeat  615rpx 80rpx #fff ;
+  background-size: 26rpx 12rpx;
+  margin-bottom: 20rpx;
+}
+.list_img{
+  width: 94rpx;
+  height: 94rpx;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.list_name{
+  width: 300rpx;
+  float: left;
+  margin-left: 18rpx;
+  color: #222;
+  font-size: 32rpx;
+  font-weight: 600;
+  height: 44rpx;
+  line-height: 44rpx;
+}
+.list_tit{
+  width: 300rpx;
+  float: left;
+  height: 34rpx;
+  line-height: 34rpx;
+  color: #999;
+  font-size: 24rpx;
+  margin-left: 18rpx;
+  margin-top: 11rpx;
+}
+.list_tit text{
+  color: #6C79FB;
+}
+.main_footer{
+  display: block;
+  clear: both;
+  width: auto;
+  margin-left: 110rpx;
+}
+.main_footer view{
+  font-size: 24rpx;
+  color: #999999; 
+}
+.main_footer view text{
+  font-size: 24rpx;
+  color: #222; 
+}
+.color1.color1{
+  color: #6C79FB;
+}
+.color2.color2{
+  color: #FF5E86;
+}
+.color3.color3{
+  color: #ACB2FF;
+}
+.color4.color4{
+  color: #FFD74B;
+}
+.nobg.nobg.nobg{
+  background: #fff;
+}

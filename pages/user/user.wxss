@@ -1,0 +1,105 @@
+/* pages/user/user.wxss */
+page{
+  width: 100%;
+  background: #FAFAFA;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  width: 100%;
+  height: auto;
+}
+.header{
+  width: 100%;
+  height: 262rpx;
+  background: #6C79FB;
+  position: relative;
+  padding-top: 38rpx;
+}
+.usertop{
+  width: 670rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20rpx;
+  background: #fff;
+  box-shadow:0rpx 0rpx 8rpx 0rpx rgba(221,221,221,1);
+
+}
+.userBanner{
+  width: 670rpx;
+  height: 336rpx;  
+  overflow: hidden;
+  border-radius: 20rpx;
+}
+.userBanner image{
+ 
+  border-radius: 20rpx;
+}
+.userHeader{
+  width: 186rpx;
+  height: 84rpx;
+  line-height: 70rpx;
+  text-align: center;
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  background: url(https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/userHeader.png) no-repeat;
+  background-size:100% 100%; 
+  font-size: 24rpx;
+  color: #fff;
+}
+.store_detail{
+  width: 610rpx;
+  overflow: hidden;
+
+  padding: 30rpx;
+
+}
+.store_detail text{
+  display: block;
+  font-size:24rpx ; 
+  color: #999;
+  line-height: 45rpx;
+}
+.store_detail .store_name{
+  font-size:28rpx ; 
+  color: #222222;
+  margin-bottom: 10rpx;
+}
+.newList{
+  width: 670rpx;
+  margin: 0 auto;
+  margin-top: 358rpx;
+  font-size: 28rpx;
+  color: #222222;
+  padding: 30rpx 0;
+  border-bottom: solid 1rpx #eee;
+  clear: both;
+}
+.newList text{
+  display: block;
+  float: left;
+}
+.newList image{
+  width: 10rpx;
+  height: 26rpx;
+  float: right;
+}
+.newList > view{
+  overflow: hidden;
+}
+.exit{
+  width:670rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  color: #fff; 
+  font-size: 32rpx;
+  border-radius: 20rpx;
+  background: #6C79FB;
+  position: absolute;
+  bottom: 96rpx;
+  left: 40rpx;
+}
