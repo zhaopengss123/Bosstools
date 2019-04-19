@@ -1,0 +1,24 @@
+<view class='content'>
+  <view class='header'>
+      <view class='usertop'>
+            <view class='userBanner'><image src='{{ storeDetail.shopCoverImage ? storeDetail.shopCoverImage : "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/userbg1234554565.png" }}'></image></view>
+            <view class='store_detail'>
+                  <text class='store_name'>{{ storeDetail.shopName }}</text>
+                  <text>开业时间：{{ storeDetail.createTime ? storeDetail.createTime :'' }} </text>
+                  <text>营业时间：{{ storeDetail.businessTime }} </text>
+                  <text>联系电话：{{ storeDetail.shopTel }} </text>
+                  <text>地址：{{ storeDetail.shopAddress }}</text>
+            </view>
+      </view>
+ 
+  </view>
+  <!-- <view class='newList'>
+      <view>
+          <text>消息通知</text>
+          <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/next.png'></image>
+      </view>    
+  </view> -->
+  <view class='exit' bindtap='exit'>
+      退  出
+  </view>
+</view>

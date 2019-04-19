@@ -1,0 +1,20 @@
+<view class='content'>
+        <view class='main'>
+            <view class='main_main'>
+                <view class="mainList {{ item.blone ? 'cli' :'' }}" wx:for="{{ dataList }}" wx:key = "id" wx:for-index="idx" bindtap='isblone' data-index="{{ idx }}"  data-id = "{{item.teacherId}}">
+                  <view  >                 
+                    <view class='list_img'>
+                          <image src='{{ item.headImage?  item.headImage : "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/memberHeading5633.jpg" }}'></image>
+                          headImage
+                    </view>
+                    <view class='list_name'>{{ item.teacherName }}</view>
+                    <view class='list_tit'>全部体验卡 <text>{{ typeFlag == 1 ? item.clueCount :(typeFlag == 2 ? item.practiceCount :( typeFlag == 3 ? item.cardCount: item.removeCount ) )  }}条</text></view>
+
+                 </view>   
+                </view>
+                <view class='noList' wx:if="{{ !dataList.length }}">暂无数据</view>
+            </view>
+
+
+        </view>
+</view>

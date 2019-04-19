@@ -1,0 +1,236 @@
+/* pages/store/store.wxss */
+page{
+  width: 100%;
+  background: #FAFAFA;
+
+}
+.content{
+  width: 100%;  
+  overflow: hidden;
+}
+.header{
+  width: 100%;
+  overflow: hidden;
+
+}
+.yesterday{
+  width: 100%;
+  color: #555555;
+  font-size: 24rpx;
+  text-align: center;
+  margin: 40rpx 0 10rpx 0;
+}
+.month{
+  color: #6C79FB;
+  font-size: 100rpx;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+.month_text{
+ font-weight:600;
+  color:rgba(34,34,34,1);
+  height: 44rpx;
+  line-height:44rpx; 
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 6rpx;
+}
+.main{
+  width: 100%;
+  overflow: hidden;
+}
+.commission{
+  width: 610rpx;
+  padding: 30rpx;
+  background:rgba(255,254,254,1);
+  box-shadow:0px 0px 8px 0px rgba(221,221,221,1);
+  border-radius:10px;
+  margin: 0 auto;
+  margin-top: 44rpx;
+}
+.commission_header{
+  overflow: hidden;
+}
+.commission_tit{
+  width: auto;
+  float: left;
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(34,34,34,1);
+}
+.commission_btn{
+  width: auto;
+  float: right;
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(108,121,251,1);
+}
+.commission_main{
+  width: 100%;
+  overflow: hidden;
+  padding:  0 16rpx;
+}
+.commission_list{
+  width: 122rpx;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  margin-right: 30rpx;
+}
+.commission_list:nth-child(4){
+  margin: 0;
+}
+.commission_main{
+  margin-top: 40rpx;
+}
+.list_text{
+  width: 100%;
+  text-align: center;
+  color: #222;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.list_position{
+  width: 122rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 0;
+  color: #222;
+  font-size: 32rpx;
+  text-align: center;
+}
+.list_position text{
+  display: block;
+}
+.list_position text:nth-child(2){
+  color: #ccc;
+  font-size: 20rpx;
+}
+.results{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.praise{
+  width: 610rpx;
+  padding: 30rpx;
+  background: #fff;
+  box-shadow:0rpx 0rpx 8rpx 0rpx rgba(221,221,221,1);
+  border-radius:10rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+.praise_tit{
+  font-size: 28rpx;
+  color: #222;
+  width: auto;
+  float: left;
+}
+.praise_btn{
+  width: 246rpx;
+  float: right;
+  background: #F5F5F5;
+  border-radius: 29rpx;
+}
+.praise_btn view{
+  width: 110rpx;
+  float: left;
+  height: 58rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 58rpx;
+}
+.praise_btn view.cli{
+  width: 136rpx;
+  float: left;
+  height: 58rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #FFF;
+  background: #6988FF;
+  line-height: 58rpx;
+  border-radius: 29rpx;
+}
+.praise_left{
+  width: 340rpx;
+  float: left;
+  height: 348rpx;
+  position: relative;
+}
+.praiseCircle{
+  position: absolute;
+  top: 58rpx;
+  left: 24rpx;
+}
+.praise_right{
+  width: 200rpx;
+  float: right; 
+  margin-top: 90rpx;
+}
+.praise_right .list{
+  display: block;
+  clear: both;
+  padding-top: 30rpx;
+}
+.praise_right .list view:nth-child(1){
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 4rpx;
+  background: #FF5E86;
+  margin: 7rpx  10rpx 0 0;
+  float: left;
+ 
+}
+.praise_right .list:nth-child(1){
+  padding-top: 0; 
+}
+.praise_right .list:nth-child(2) view:nth-child(1){
+  background: #ABACFF; 
+}
+.praise_right .list:nth-child(3) view:nth-child(1){
+  background: #FFCB39; 
+}
+.praise_right .list:nth-child(4) view:nth-child(1){
+  background: #6988FF; 
+}
+
+.praise_right .list view:nth-child(2){
+  height: 34rpx;
+  line-height: 34rpx;
+  color: #555555;
+  font-size: 24rpx; 
+  float: left;
+  margin-right:10rpx;
+}
+.praise_right .list view:nth-child(3){
+  height: 34rpx;
+  line-height: 34rpx;
+  color: #555555;
+  font-size: 24rpx; 
+  float: left;
+  font-weight: 600;
+}
+.rate{
+  width: 288rpx;
+  text-align: center;
+  color: #222222;
+  font-size: 28rpx;
+  position: absolute;
+  top: 164rpx;
+  left: 24rpx;
+  font-weight:600;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.rate text{
+  display: block;
+}
+.rate text:nth-child(2){
+  color: #555;
+  font-weight: normal;
+  font-size: 24rpx;
+}

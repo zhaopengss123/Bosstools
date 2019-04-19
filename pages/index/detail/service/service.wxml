@@ -1,0 +1,32 @@
+<view class='content'>
+    <view class='header'>
+        <view class='headImg'>
+            <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/babyHeadImg.png'></image>
+        </view>
+        <view class='headText'>
+              <view class='userName'>{{ memberDetail.name }}</view>
+              <view class='label'>
+                    <view class='labelList' wx:if="{{ memberDetail.babyType }}" >{{ memberDetail.babyType }}</view>
+                    <view class='labelList' wx:if="{{ memberDetail.birthday }}" >{{ memberDetail.birthday }}个月</view>
+                    <view class='labelList' wx:if="{{ memberDetail.usedCardTimes }}" >服务过{{ memberDetail.usedCardTimes }}次</view>
+                    <view class='labelList' wx:if="{{ memberDetail.totalCardTimes && memberDetail.usedCardTimes }}" >剩余{{ memberDetail.totalCardTimes -  memberDetail.usedCardTimes }}次</view>
+              </view>
+        </view>
+    </view>
+    <view class='main'>
+        <view class='list'><view class='list_left'>入水时间</view>  <view class='list_right'>{{ memberDetail.startTime }}</view> </view>
+        <view class='list'><view class='list_left'>擦油</view>  <view class='list_right'>{{ memberDetail.oilType == 0 ?'店内':'自带' }}</view> </view>
+        <view class='list'><view class='list_left'>早教元素</view>  <view class='list_right'>{{ memberDetail.educationElements }}</view> </view>
+        <view class='list'><view class='list_left'>量体温</view>  <view class='list_right'>{{ memberDetail.animalHeat }}℃</view> </view>
+        <!-- <view class='list'><view class='list_left'>量身高</view>  <view class='list_right'>{{ memberDetail.startTime }}</view> </view> -->
+        <view class='list'><view class='list_left'>量体重</view>  <view class='list_right'>{{ memberDetail.weight }}kg</view> </view>
+         <view class='list list_photo'>
+              <view>照片</view>
+               <view class='list_image'>
+                  <image wx:for="{{ memberDetail.phoneUrls }}" wx:key="key" src='{{ item }}'></image>
+              </view> 
+        </view>
+        <view class='list'><view class='list_left'>服务老师</view>  <view class='list_right'>{{ memberDetail.employeeName }}</view> </view>
+        <view class='list'><view class='list_left'>提交时间</view>  <view class='list_right'>{{ memberDetail.createDate }}</view> </view>
+    </view>
+</view>

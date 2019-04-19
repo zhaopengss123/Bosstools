@@ -1,0 +1,19 @@
+<view class="content">
+    <view class='logo'>
+        <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/store/popopoocLogo.png'></image>
+    </view> 
+    <view class='form'>
+        <form  report-submit='true'>
+          <view class='ipt-box'>
+            <input placeholder="请输入账号"  bindinput="setusername" placeholder-style="color:#9B9B9B" class='ipt-phone' auto-focus/>
+            <view class='ipt-code'>
+              <input placeholder="请输入密码"  bindinput="setpassword" placeholder-style="color:#9B9B9B" password="true" class='ipt-phone' />
+            </view>
+            <view class='prompt' wx:if = "{{ isPrompt }}">
+                {{ prompts }}
+            </view>
+          </view>
+          <button class='ipt-submit' hover-class='active' bindtap='submit'  type="default">登 录</button>
+        </form>
+    </view>
+</view>

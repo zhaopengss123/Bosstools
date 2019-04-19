@@ -1,0 +1,81 @@
+<view class='content'>
+    <view class='header'>
+        <view class='yesterday'>本月收入目标{{ storeDetail.expectTotalIncome}}元</view>
+        <view class='month'>{{ storeDetail.finishMoney }}</view>
+        <view class='month_text'>本月累计收入(元)</view>
+    </view>
+    <view class='main'>
+        <view class='commission'>
+          <view class='commission_header'>
+            <view class='commission_tit'>完成进度</view>
+            <view class='commission_btn' bindtap='more'>查看更多</view>
+          </view>
+          <view class='commission_main'>
+              <view class='commission_list' >
+                        <canvas class="circle" style=" width:122rpx; height:122rpx;" canvas-id="canvasCircle1"></canvas>
+                        <canvas class="results" style=" width:122rpx; height:122rpx;" canvas-id="canvasResults1"></canvas>
+                        <view class='list_position'>
+                              <text>{{ storeDetail.proportion1 }}%</text>
+                              <text>{{ storeDetail.clueCounts }}/{{ storeDetail.expectClueNum }}</text>
+                        </view>
+                        <view class='list_text'>新增线索</view>
+              </view>
+              <view class='commission_list' >
+                        <canvas class="circle" style=" width:122rpx; height:122rpx;" canvas-id="canvasCircle2"></canvas>
+                        <canvas class="results" style=" width:122rpx; height:122rpx;" canvas-id="canvasResults2"></canvas>                        
+                        <view class='list_position'>
+                              <text>{{ storeDetail.proportion2 }}%</text>
+                              <text>{{ storeDetail.pravticeCounts }}/{{ storeDetail.expectExperienceNum }}</text>
+                        </view>
+                        <view class='list_text'>卖体验卡</view>
+              </view>
+              <view class='commission_list' >
+                        <canvas class="circle" style=" width:122rpx; height:122rpx;" canvas-id="canvasCircle3"></canvas>
+                        <canvas class="results" style=" width:122rpx; height:122rpx;" canvas-id="canvasResults3"></canvas>
+                        <view class='list_position'>
+                              <text>{{ storeDetail.proportion3 }}%</text>
+                              <text>{{ storeDetail.applyCardCount }}/{{ storeDetail.expectCardNum }}</text>
+                        </view>
+                        <view class='list_text'>会员办卡</view>
+              </view>
+              <view class='commission_list' >
+                        <canvas class="circle" style=" width:122rpx; height:122rpx;" canvas-id="canvasCircle4"></canvas>
+                        <canvas class="results" style=" width:122rpx; height:122rpx;" canvas-id="canvasResults4"></canvas>
+                        <view class='list_position'>
+                             <text>{{ storeDetail.proportion4   }}%</text>
+                              <text>{{ storeDetail.removeCount }}/{{ storeDetail.expectConsumecardNum }}</text> 
+                        </view>
+                        <view class='list_text'>会员耗卡</view>
+              </view>                            
+
+          </view>
+        </view>
+    </view>
+
+    <view class='praise'>
+          <view class='praise_tit'>门店表扬率</view>
+          <view class='praise_btn' >
+              <view class="{{timeFlag == 2 ?'cli':'' }}" bindtap='monthSelect' data-id='2' >上月</view>
+              <view class="{{timeFlag == 1 ?'cli':'' }}" bindtap='monthSelect' data-id='1'>本月</view>
+          </view>
+          <view class='praise_main'>
+              <view class='praise_left'>
+                  <canvas class="praiseCircle " style=" width:288rpx; height:288rpx;" canvas-id="praiseCircle1" ></canvas>
+                  <canvas class="praiseCircle " style=" width:288rpx; height:288rpx;" canvas-id="praiseCircle2" ></canvas>
+                  <canvas class="praiseCircle " style=" width:288rpx; height:288rpx;" canvas-id="praiseCircle3" ></canvas>
+                  <canvas class="praiseCircle " style=" width:288rpx; height:288rpx;" canvas-id="praiseCircle4" ></canvas>
+                  <view class='rate'>
+                      <text>{{ evaluationDetail.proportion1 }}%</text>
+                      <text>{{ timeFlag == 2? '上' : '本' }}月表扬率</text>
+                  </view>
+              </view>
+              <view class='praise_right'>
+                   <view class='list'><view></view><view>表扬</view><view>{{ evaluationDetail.totalGoodCount }}次</view></view>
+                   <view class='list'><view></view><view>满意</view><view>{{ evaluationDetail.totalPraiseCount }}次</view></view>
+                   <view class='list'><view></view><view>一般</view><view>{{ evaluationDetail.totalCommonlyCount }}次</view></view>
+                   <view class='list'><view></view><view>不好</view><view>{{ evaluationDetail.totalNotGoodCount }}次</view></view> 
+              </view>
+          </view>
+    </view>
+
+</view>

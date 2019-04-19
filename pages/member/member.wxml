@@ -1,0 +1,48 @@
+<view class='content'>
+  <view class='nav'>
+        <view class='nav_list {{tabId == 1? "cli" :""}}' data-id='1' bindtap='navClick'>
+             <view class='nav_name'>积分排名</view> 
+             <view class='nav_icon'></view>
+        </view>
+        <view class='nav_list {{tabId == 2? "cli" :""}}' data-id='2' bindtap='navClick'>
+             <view class='nav_name'>线索数量</view> 
+             <view class='nav_icon'></view>
+        </view>
+          <view class='nav_list {{tabId == 3? "cli" :""}}' data-id='3' bindtap='navClick'>
+             <view class='nav_name'>回访数量</view> 
+             <view class='nav_icon'></view>
+        </view>
+          <view class='nav_list {{tabId == 4? "cli" :""}}' data-id='4' bindtap='navClick'>
+             <view class='nav_name'>耗卡数量</view> 
+             <view class='nav_icon'></view>
+        </view>            
+  </view>
+  <view class='detail'>
+      <view class='detail_tit'>
+            <view class='detail_name'>
+              排名详情
+            </view>
+            <view class='detail_nav'>
+                <text class='{{ nav_index == 0 ? "cli" :"" }}' data-index='0' bindtap='dateNavClick'>今日</text>
+                <text class='{{ nav_index == 1 ? "cli" :"" }}' data-index='1' bindtap='dateNavClick'>本周</text>
+                <text class='{{ nav_index == 2 ? "cli" :"" }}' data-index='2' bindtap='dateNavClick'>本月</text>
+            </view>
+      </view>
+      <view class='detail_text' wx:if="{{ memeberList.length}}">
+            <view class='detail_text_list header'> <text>名次</text> <text>姓名</text>  <text>{{ listHeader }}</text> </view>
+            
+              <view class="detail_text_list" wx:for="{{ memeberList }}" wx:key="index" bindtap='navDetail' data-id="{{ item.teacherId }}" data-count="{{ item.serviceCount }}"  >
+                  <text wx:if="{{ index>2 }}">{{ index>=9 ? (index+1) : '0'+(index+1) }}   </text>
+                  <text wx:else class="{{ index == 0 ? 'cli1' : (index == 1? 'cli2' : (index==2? 'cli3':'') )}}"></text>
+                  <text>{{ item.teacherName ? item.teacherName : item.memberName }}</text>
+                  <text>{{ tabId == 1 ? item.commissionPoint :( tabId == 2 ? item.clueCount : (tabId == 3 ? item.returnVisitNum:  item.serviceCount  ) ) }}</text>
+              </view>          
+      </view>
+      <view class='empty' wx:else>
+          暂无数据
+      </view>
+
+  </view>
+   
+
+</view>

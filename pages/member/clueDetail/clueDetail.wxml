@@ -1,0 +1,12 @@
+ <view class='content'>
+        <view class='teacher_list' wx:for="{{ memeberList }}" wx:key="id" >
+        <view class='teacher_text'>
+              <view class='text_top'>
+                  <view class='teacher_name'>{{ item.memberName }}</view>
+              </view>
+        <view class='text_footer'> 获客渠道：{{ item.source?item.source :'门店流量'  }} </view>
+        <view class='text_footer'> 客户电话：{{ item.memberPhone }}</view>
+        </view> 
+        </view>
+</view>
+

@@ -1,0 +1,11 @@
+<view class='content'>
+    <view class='messageList'>
+          <view class='messageDate'>2018.11.23 10:11:25</view>
+          <view class='messageDetail'>
+              <view class='messageTitle'>这是一个标题</view>
+              <view class='messageText'>
+                北京鱼乐贝贝教育科技有限公司成立于2011年，一直专注于婴幼儿游泳和水上教育事业的开发
+              </view>
+          </view>
+    </view>
+</view>

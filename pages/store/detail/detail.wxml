@@ -1,0 +1,58 @@
+<view class='content'>
+      <view class='nav'>
+        <view class='nav_list {{typeFlag == 1? "cli" :""}}' data-id='1' bindtap='navClick'>
+             <view class='nav_name'>线索</view> 
+             <view class='nav_icon'></view>
+        </view>
+        <view class='nav_list {{typeFlag == 2? "cli" :""}}' data-id='2' bindtap='navClick'>
+             <view class='nav_name'>体验卡</view> 
+             <view class='nav_icon'></view>
+        </view>
+          <view class='nav_list {{typeFlag == 3? "cli" :""}}' data-id='3' bindtap='navClick'>
+             <view class='nav_name'>办卡</view> 
+             <view class='nav_icon'></view>
+        </view>
+          <view class='nav_list {{typeFlag == 4? "cli" :""}}' data-id='4' bindtap='navClick'>
+             <view class='nav_name'>耗卡</view> 
+             <view class='nav_icon'></view>
+        </view> 
+        </view>
+        <view class='main'>
+            <view class='main_header'>
+                  <view class='main_left'>
+                        <canvas class="circle" style=" width:240rpx; height:240rpx;" canvas-id="canvasCircle1"></canvas>
+                        <canvas class="circle_p" style=" width:240rpx; height:240rpx;" canvas-id="canvasCircle2"></canvas>
+                        <view class='percentage'>
+                            <text class="{{ typeFlag == 1 ? 'color1' : ( typeFlag == 2 ? 'color2' :( typeFlag == 3 ? 'color3' : 'color4') ) }}">{{ typeFlag == 1 ? stores.proportion1 : ( typeFlag == 2 ? stores.proportion2 :( typeFlag == 3 ? stores.proportion3 : stores.proportion4) ) }}%</text>
+                            <text>已完成</text>
+                        </view>
+                  </view>
+                  <view class='main_right'>
+                      <view>已完成{{ typeFlag == 1 ? '线索' : ( typeFlag == 2 ? '体验卡' :( typeFlag == 3 ? '办卡' : '耗卡') ) }}{{ typeFlag == 1 ? '条' : ( typeFlag == 2 ? '张' :( typeFlag == 3 ? '张' : '次') ) }}数</view>
+                      <text>{{ typeFlag == 1 ? stores.clueCounts : ( typeFlag == 2 ? stores.pravticeCounts :( typeFlag == 3 ? stores.applyCardCount : stores.removeCount) ) }}</text>
+                      <view>目标{{ typeFlag == 1 ? '线索' : ( typeFlag == 2 ? '体验卡' :( typeFlag == 3 ? '办卡' : '耗卡') ) }}{{ typeFlag == 1 ? '条' : ( typeFlag == 2 ? '张' :( typeFlag == 3 ? '张' : '次') ) }}数</view>
+                      <text>{{ typeFlag == 1 ? stores.expectClueNum : ( typeFlag == 2 ? stores.expectExperienceNum :( typeFlag == 3 ? stores.expectCardNum : stores.expectConsumecardNum) ) }}</text>                      
+                  </view>
+            </view>
+
+            <view class='main_main'>
+                <view class="mainList {{ item.blone ? 'cli' :'' }}{{ item.teacherId&&typeFlag!=4 ?  '' : 'nobg' }}" wx:for="{{ dataList }}" wx:key = "id" wx:for-index="idx" bindtap='isblone' data-index="{{ idx }}"  data-id = "{{item.teacherId}}">
+                  <view  >                 
+                    <view class='list_img'>
+                          <image src='{{ item.headImage?  item.headImage : "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/memberHeading5633.jpg" }}'></image>
+                         
+                    </view>
+                    <view class='list_name'>{{ item.teacherName }}</view>
+                    <view class='list_tit'>全部{{ typeFlag == 1 ? '线索' : ( typeFlag == 2 ? '体验卡' :( typeFlag == 3 ? '办卡' : '耗卡') ) }} <text>{{ typeFlag == 1 ? item.clueCount :(typeFlag == 2 ? item.practiceCount :( typeFlag == 3 ? item.cardCount: item.removeCount ) )  }}{{ typeFlag == 1 ? '条' : ( typeFlag == 2 ? '张' :( typeFlag == 3 ? '张' : '次') ) }}</text></view>
+                    <view class='main_footer'  wx:if="{{item.blone}}">
+                          <view wx:if="{{ item.arr.length }}" wx:for="{{ item.arr }}" wx:key="id" wx:for-item="data">{{ data.comment? data.comment+' ' :'' }}
+                          {{  typeFlag != 1&& typeFlag != 2? '' : (data.source ? data.source : '门店')}}  {{ data.typeName?data.typeName:''}} {{ data.balance? data.balance: '' }}  {{ data.sourceCount?data.sourceCount:'' }}<text></text></view>
+                          <view wx:if="{{ !item.arr || !item.arr.length }}" >门店流量 {{ typeFlag == 1 ? item.clueCount :(typeFlag == 2 ? item.practiceCount :( typeFlag == 3 ? item.cardCount: item.removeCount ) )  }}</view>
+                    </view>
+                 </view>   
+                </view>
+            </view>
+
+
+        </view>
+</view>
