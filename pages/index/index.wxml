@@ -1,81 +1,165 @@
 <view class='content'>
     <view class='banner'>
         <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
-    </view>
-    <view class='total'>
-        <view class='total_top'>
-          <view class='total_tit'>今日实际/任务</view>
-          <view class='total_icon' bindtap='toggleFun'>!</view>
+        <view class='nav'>
+              <view class='navList {{ tabNav == 0 ? "cli" : "" }}' bindtap='toggleClick' data-id='0'>
+                  <view>经营概况</view>
+                  <view></view>
+              </view>
+              <view class='navList {{ tabNav == 1 ? "cli" : "" }}' bindtap='toggleClick' data-id='1'>
+                <view>服务概况</view>
+                <view></view>
+              </view>
         </view>
-          <view class='total_explain' wx:if="{{ toggle }}">
-              <view><text>收入：</text><text>今日门店实际完成收入和门店目标收入（包括商品、办卡、体验卡）</text></view> 
-              <view><text>耗卡：</text><text>今日门店实际耗卡次数和门店目标耗卡次数</text></view> 
-              <view><text>线索：</text><text>今日实际获得新线索数量和门店目标新线索数量</text></view>  
-               <view><text>体验卡：</text><text>今日门店售卖体验卡数量和今日门店目标售卖体验卡数量</text></view> 
-          </view>
-          <view class='total_list'>
-            <scroll-view
-             scroll-x
-              style="height: 234rpx; width:2023rpx; " >
-              <view class='slist' bindtap='toIncome'>
-                  <text>收入</text>
-                  <text>{{ times }}</text>
-                  <text>{{ storeDetail.finishMoney }}/{{ storeDetail.expectTotalIncome }}</text>
-              </view>
-              <view class='slist' bindtap='toIntegral'>
-                  <text>耗卡</text>
-                  <text>{{ times }}</text>
-                  <text>{{storeDetail.removeCount}}/{{ storeDetail.expectConsumecardNum }}</text>
-              </view>
-              <view class='slist' bindtap='toExperience'>
-                  <text>体验卡</text>
-                  <text>{{ times }}</text>
-                  <text>{{ storeDetail.pravticeCounts }}/{{ storeDetail.expectExperienceNum }}</text>
-              </view>
-              <view class='slist' bindtap='toClue'>
-                  <text>线索</text>
-                  <text>{{ times }}</text>
-                  <text>{{storeDetail.clueCounts}}/{{storeDetail.expectClueNum}}</text>
-              </view>   
-              <view class='slist' bindtap='toAsk'>
-                  <text>回访</text>
-                  <text>{{ times }}</text>
-                  <text>{{storeDetail.callBackNum}}/{{storeDetail.expectCallbackClueNum}}</text>
-              </view>     
-             </scroll-view>            
-          </view>
+    </view>
+    <view class='detail' wx:if="{{ tabNav == 0 }}">
+      <view class='detail_tit'>
+            <view class='detail_name'>
+              <text>排名详情</text>
+              <view class='total_icon' bindtap='toggleFun'>!</view>
+            </view>
+            <view class='detail_nav'>
+                <text class='{{ nav_index == 0 ? "cli" :"" }}' data-index='0' bindtap='dateNavClick'>昨日</text>
+                <text class='{{ nav_index == 1 ? "cli" :"" }}' data-index='1' bindtap='dateNavClick'>今日</text>
+                <text class='{{ nav_index == 2 ? "cli" :"" }}' data-index='2' bindtap='dateNavClick'>前七日</text>
+            </view>
+      </view>
+      <view class='selectDate'>
+            <view class='date1'>2019.04.02</view>
+            <view class='sefont'>至</view>
+            <view class='date2'>2019.04.04</view>
+      </view>
+      <view class='ts' wx:if="{{ toggle }}">
+          经营总计：分为门店办卡收入、商品购买收入、调整收入可能出现负数、续卡收入；新增线索数、预约数量、耗卡数量、新增会员数； 
+      </view>
 
-    </view>
-    <view class='teacher'>
-          <view class='teacher_tit'>老师任务情况</view>
-          <view class='teacher_list' wx:for="{{ list }}" wx:key="id" >
-            <navigator url='detail/detail?teacherId={{ item.teacherId }}' >
-             <view class='headImg'> <image src='{{ item.headImg ? item.headImg : "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/memberHeading5633.jpg" }}'></image> </view>
-              <view class='teacher_text'>
-              <view class='text_top'>
-                  <view class='teacher_name'>{{ item.teacherName }}</view>
-                  <view class='teacher_detail'>
-                
-                     查看详情
-                  
+      <view class='amount'>
+            <view class='amountTit'>
+                  <view>经营总计<text>¥62354.12</text></view>
+                  <view>2019.04.02</view>
+            </view>
+            <view class='amountMain'>
+                  <view class='amountList'>
+                      <view>办卡收入</view>
+                      <view>¥992.11</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>商品收入</view>
+                      <view>¥22</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>调整收入</view>
+                      <view>¥-191.23</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>续卡收入</view>
+                      <view>¥992.11</view>
                   </view>
+
+                  <view class='amountList'>
+                      <view>办卡收入</view>
+                      <view>¥992.11</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>商品收入</view>
+                      <view>¥22</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>调整收入</view>
+                      <view>¥-191.23</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>续卡收入</view>
+                      <view>¥992.11</view>
+                  </view>                        
+
+            </view>
+      </view>
+
+      <view class='amount'>
+            <view class='amountTit'>
+                  <view>经营总计<text>¥62354.12</text></view>
+                  <view>2019.04.02</view>
+            </view>
+            <view class='amountMain'>
+                  <view class='amountList'>
+                      <view>办卡收入</view>
+                      <view>¥992.11</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>商品收入</view>
+                      <view>¥22</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>调整收入</view>
+                      <view>¥-191.23</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>续卡收入</view>
+                      <view>¥992.11</view>
+                  </view>
+
+                  <view class='amountList'>
+                      <view>办卡收入</view>
+                      <view>¥992.11</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>商品收入</view>
+                      <view>¥22</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>调整收入</view>
+                      <view>¥-191.23</view>
+                  </view> 
+                  <view class='amountList'>
+                      <view>续卡收入</view>
+                      <view>¥992.11</view>
+                  </view>                        
+
+            </view>
+      </view>
+
+
+  </view>
+
+
+<view class='orderList'>
+      <view class='detail_tit'>
+            <view class='detail_name'>
+              <text>预约记录</text>
+              <view class='add_icon'></view>
+            </view>
+            <view class='detail_nav'>
+                <text class='{{ nav_index == 0 ? "cli" :"" }}' data-index='0' bindtap='dateNavClick'>今天</text>
+                <text class='{{ nav_index == 1 ? "cli" :"" }}' data-index='1' bindtap='dateNavClick'>明天</text>
+                <text class='{{ nav_index == 2 ? "cli" :"" }}' data-index='2' bindtap='dateNavClick'>未来七日</text>
+            </view>
+      </view>
+      <view class='orderMain'>
+          <view class='order_list'>
+              <view class='order_img'>
+                  <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
               </view>
-               <view class='text_center'>
-                  <view class='teacher_data'>耗卡 <text>{{item.removeCount}}/{{item.consumeCard}}</text> </view>
-                  <view class='teacher_data'>线索 <text>{{ item.clueCounts }}/{{ item.clueNum }}</text> </view>
-                  <view class='teacher_data'>体验卡 <text>{{ item.pravticeCounts }}/{{ item.experienceNum }}</text> </view>
-                  <!-- <view class='teacher_data'>回访 <text>{{ item.callBackClue }}/{{ item.expectCallbackClue }}</text> </view>   -->
+              <view class='order_detail'>
+                  <view class='order_tit'>
+                      <view class='order_name'>Samuil （xiaoming）</view>
+                      <view class='order_label'> <text>女孩</text> <text>男孩</text> </view>
+                  </view>
+                  <view class='order_btn'>联系家长</view>
               </view>
-              <view class='text_bottom' wx:if="{{ item.workContend == 1 }}">
-                  {{ item.workTime }}-至今 空闲！
+              <view class='card_number'>
+                  <view>剩余卡次<text>20次</text></view>
+                  <view>剩余金额<text>100元</text></view>
               </view>
-              <view class='text_footer' wx:else>
-                {{ item.workTime }} {{ item.workContend }}
-              </view>
-              </view> 
-              </navigator> 
+          
+          <view class='order_teacher'>
+              <view class='teacher_img'><image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image></view>
+              <view class='teacher_name'>小强老师</view>
+              <view class='teacher_date'>2019.04.02</view>
           </view>
-    
-    </view>
+          </view>
+      </view>
+</view>
+
 
 </view>

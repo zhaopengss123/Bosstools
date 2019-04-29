@@ -6,7 +6,9 @@ Page({
     list:[],
     userInfo:{},
     toggle:false,
-    storeDetail:{}
+    storeDetail:{},
+    tabNav:0,
+    nav_index:0
   },
 
   onLoad: function () {
@@ -18,6 +20,13 @@ Page({
       m = m > 9 ? m : '0'+ m;
       d = d > 9 ? d : '0' + d;     
       this.setData({ times : y+'-'+m+'-'+d });
+
+
+      wx.login({
+        success(res){
+            console.log(res);
+        }
+      })    
 
   },
   onShow(){
@@ -120,5 +129,11 @@ Page({
   //下拉刷新
   onPullDownRefresh() {
     this.getData();
+  },
+  toggleClick(e) {
+    let index = e.currentTarget.dataset.id;
+    this.setData({
+      tabNav: index
+    })
   }
 })

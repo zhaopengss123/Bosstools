@@ -12,7 +12,14 @@ Page({
     userInfo: { voucher:'0' },
     memeberList:[],
     listHeader:'积分数量',
-    timeFlag:'day'
+    timeFlag:'day',
+    tabNav:0,
+    list: [],
+    userInfo: {},
+    toggle: false,
+    storeDetail: {},
+  
+    
   },
 
   /**
@@ -25,13 +32,23 @@ Page({
       success(res) {
         that.setData({ userInfo: res.data })
         that.getData();
+        that.getIndexData();
       },
       fail(res) {
         wx.redirectTo({
           url: '/pages/login/login',
         })
       }
-    });    
+    });   
+    let date = new Date();
+    let y = date.getFullYear();
+    let m = date.getMonth() + 1;
+    let d = date.getDate();
+    m = m > 9 ? m : '0' + m;
+    d = d > 9 ? d : '0' + d;
+    this.setData({ times: y + '-' + m + '-' + d });
+
+
   },
 
   /**
@@ -42,7 +59,7 @@ Page({
   },
   onShow(){
     this.setData({ tabId: 1 });
-    if (this.data.userInfo.voucher!=0){
+    if (this.data.userInfo.voucher != 0 && this.data.userInfo.voucher){
       this.getData();
     }
       
@@ -105,6 +122,7 @@ Page({
       listHeader = "耗卡数量";
       typeFlag = 4;
     }
+
     let timeFlag = this.data.nav_index == 0 ? 'day' : (this.data.nav_index == 1? 'week' :'month');  
     let paramJson = JSON.stringify({
       voucher: this.data.userInfo.voucher,
@@ -143,5 +161,101 @@ Page({
   //下拉刷新
   onPullDownRefresh() {
     this.getData();
+  },
+
+
+  /*------------首页介绍开关----------------*/
+  toggleFun() {
+    if (this.data.toggle) {
+      this.setData({ toggle: false })
+    } else {
+      this.setData({ toggle: true })
+    }
+  },
+  /*------------首页介绍----------------*/
+  getIndexData() {
+    /*---------获取门店数据--------------*/
+    let paramJson = JSON.stringify({
+      voucher: this.data.userInfo.voucher,
+      timeFlag: 'day'
+    })
+    Http.get('/achievement/list/achievement/data', {
+      paramJson
+    }).then(res => {
+      if (res.result == 1000) {
+        this.setData({
+          storeDetail: res.data
+        })
+      }
+      wx.hideLoading();
+    }, err => {
+      wx.showModal({
+        title: '网络错误',
+        content: '请检查网络',
+        showCancel: false
+      })
+      wx.hideLoading();
+    });
+    /*---------获取老师列表--------------*/
+    paramJson = JSON.stringify({
+      voucher: this.data.userInfo.voucher,
+      timeFlag: this.data.times
+    })
+    Http.get('/achievement/list/employee/achievement/data', {
+      paramJson
+    }).then(res => {
+      if (res.result == 1000) {
+        this.setData({
+          list: res.data
+        })
+      }
+      wx.hideLoading();
+      wx.stopPullDownRefresh();
+    }, err => {
+      wx.showModal({
+        title: '网络错误',
+        content: '请检查网络',
+        showCancel: false
+      })
+      wx.hideLoading();
+    });
+
+  },
+  toIncome() {
+    wx.navigateTo({
+      url: './income/income',
+    })
+  },
+  toIntegral() {
+    wx.navigateTo({
+      url: './integral/integral',
+    })
+  },
+  toClue() {
+    wx.navigateTo({
+      url: './clueDetail/clueDetail',
+    })
+  },
+  toAsk() {
+    wx.navigateTo({
+      url: './ask/ask?teacherId=&timeFlag=' + this.data.times,
+    })
+  },
+  toExperience() {
+    wx.navigateTo({
+      url: './experience/experience',
+    })
+  },
+  toggleClick(e){
+    let index = e.currentTarget.dataset.id;
+    this.setData({
+      tabNav: index
+    })
+  },
+  //下拉刷新
+  onPullDownRefresh() {
+    this.getData();
   }
+
+
 })
