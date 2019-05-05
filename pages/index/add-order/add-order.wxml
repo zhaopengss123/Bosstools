@@ -1,0 +1,54 @@
+<view class='main'>
+    <view class='seacher'>
+        <input placeholder="搜索客户手机号" auto-focus />
+    </view>
+    <view class='listmain'>
+        <view class='list_tit'>
+            会员列表
+        </view>
+      <view class='orderMain'>
+          <view class='order_list'>
+              <view class='order_img'>
+                  <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
+                  <view><image src='/assets/images/memberIcon.png'></image></view>
+              </view>
+              <view class='order_detail'>
+                  <view class='order_tit'>
+                      <view class='order_name'>Samuil （xiaoming）</view>
+                      <view class='order_label'> <text>女孩</text> <text>男孩</text> </view>
+                  </view>
+                  <view class='order_btn'>预约游泳</view>
+              </view>
+          </view>
+          <view class='order_list'>
+              <view class='order_img'>
+                  <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
+                  <view><image src='/assets/images/memberIcon.png'></image></view>
+              </view>
+              <view class='order_detail'>
+                  <view class='order_tit'>
+                      <view class='order_name'>Samuil （xiaoming）</view>
+                      <view class='order_label'> <text>女孩</text> <text>男孩</text> </view>
+                  </view>
+                  <view class='order_btn'>预约游泳</view>
+              </view>
+          </view>
+
+          <view class='order_list'>
+              <view class='order_img'>
+                  <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
+                  <view><image src='/assets/images/memberIcon.png'></image></view>
+              </view>
+              <view class='order_detail'>
+                  <view class='order_tit'>
+                      <view class='order_name'>Samuil （xiaoming）</view>
+                      <view class='order_label'> <text>女孩</text> <text>男孩</text> </view>
+                  </view>
+                  <view class='order_btn'>预约游泳</view>
+              </view>
+          </view>
+
+      </view>
+
+    </view>
+</view>

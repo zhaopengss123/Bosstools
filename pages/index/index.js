@@ -20,14 +20,6 @@ Page({
       m = m > 9 ? m : '0'+ m;
       d = d > 9 ? d : '0' + d;     
       this.setData({ times : y+'-'+m+'-'+d });
-
-
-      wx.login({
-        success(res){
-            console.log(res);
-        }
-      })    
-
   },
   onShow(){
     let that = this;

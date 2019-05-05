@@ -123,7 +123,7 @@
   </view>
 
 
-<view class='orderList'>
+<view class='orderList' wx:if="{{ tabNav != 0 }}">
       <view class='detail_tit'>
             <view class='detail_name'>
               <text>预约记录</text>
@@ -139,6 +139,7 @@
           <view class='order_list'>
               <view class='order_img'>
                   <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
+                  <view><image src='/assets/images/memberIcon.png'></image></view>
               </view>
               <view class='order_detail'>
                   <view class='order_tit'>

@@ -3,6 +3,8 @@
     "pages/index/index",
     "pages/index/detail/detail",
     "pages/index/income/income",
+    "pages/index/add-order/add-order",
+    "pages/index/orders/orders",    
     "pages/login/login",
     "pages/member/member",
     "pages/member/integral/integral",
