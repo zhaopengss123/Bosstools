@@ -87,7 +87,8 @@ page{
 .teacher_list{
   width: 670rpx;
   margin: 0 auto;
-
+  margin-top: 20rpx;
+  overflow: hidden;
 }
 .select{
   width: 34rpx;
@@ -103,11 +104,35 @@ page{
   height: 146rpx;
   line-height: 146rpx;
   margin-left: 20rpx;
-  background: #fff;
+  background:rgba(255,254,254,1);
+  box-shadow:0px 0px 8rpx 0px rgba(221,221,221,1);
+  border-radius:16rpx;
 }
 .teacher_main image{
   width: 90rpx;
   height: 90rpx;
   margin: 28rpx 0 0 30rpx;
   border-radius: 50%;
+  float: left;
+}
+.teacher_name{
+  width: auto;
+  float: left;
+  margin-left: 20rpx;
+  color: #373C41;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.teacher_list.cli .select{
+  background: none;
+  border: solid 1rpx #6C79FB;
+}
+.teacher_list.cli .select text{
+  width: 24rpx;
+  height: 24rpx;
+  background: #6C79FB;
+  border-radius: 50%;
+  display: block;
+  margin-left: 5.5rpx;
+  margin-top: 5.5rpx;
 }

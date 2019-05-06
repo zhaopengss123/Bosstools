@@ -61,6 +61,7 @@ Page({
     this.setData({ tabId: 1 });
     if (this.data.userInfo.voucher != 0 && this.data.userInfo.voucher){
       this.getData();
+      this.getIndexData();
     }
       
   },
@@ -84,7 +85,7 @@ Page({
     let count = e.currentTarget.dataset.count;
     if (this.data.tabId == 2){
       wx.navigateTo({
-        url: `./clueDetail/clueDetail?teacherId=${id}&timeFlag=${timeFlag }`,
+        url: `/pages/index/clueDetail/clueDetail?teacherId=${id}&timeFlag=${timeFlag }`,
       })
     } else if (this.data.tabId == 3){
       wx.navigateTo({
@@ -92,7 +93,7 @@ Page({
       })
     }else if(this.data.tabId == 4){
       wx.navigateTo({
-        url: `./integral/integral?teacherId=${id}&count=${count}&timeFlag=${timeFlag }`,
+        url: `/pages/index/integral/integral?teacherId=${id}&count=${count}&timeFlag=${timeFlag }`,
       })
     }
   },
@@ -116,7 +117,7 @@ Page({
       typeFlag = 1;
     } else if (this.data.tabId == 3) {
       url = "/employee/return/visit";
-      listHeader = "回访数量";
+      listHeader = "回访数量"
     } else if (this.data.tabId == 4) {
       url = "/employee/service/num";
       listHeader = "耗卡数量";
@@ -158,12 +159,6 @@ Page({
       wx.hideLoading();
     });
   },
-  //下拉刷新
-  onPullDownRefresh() {
-    this.getData();
-  },
-
-
   /*------------首页介绍开关----------------*/
   toggleFun() {
     if (this.data.toggle) {
@@ -223,27 +218,27 @@ Page({
   },
   toIncome() {
     wx.navigateTo({
-      url: './income/income',
+      url: '/pages/index/income/income',
     })
   },
   toIntegral() {
     wx.navigateTo({
-      url: './integral/integral',
+      url: '/pages/index/integral/integral',
     })
   },
   toClue() {
     wx.navigateTo({
-      url: './clueDetail/clueDetail',
+      url: '/pages/index/clueDetail/clueDetail',
     })
   },
   toAsk() {
     wx.navigateTo({
-      url: './ask/ask?teacherId=&timeFlag=' + this.data.times,
+      url: '/pages/ask/ask?teacherId=&timeFlag=' + this.data.times,
     })
   },
   toExperience() {
     wx.navigateTo({
-      url: './experience/experience',
+      url: '/pages/index/experience/experience',
     })
   },
   toggleClick(e){
@@ -255,6 +250,8 @@ Page({
   //下拉刷新
   onPullDownRefresh() {
     this.getData();
+    this.getIndexData();
+
   }
 
 

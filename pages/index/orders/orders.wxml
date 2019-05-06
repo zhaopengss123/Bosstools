@@ -73,5 +73,36 @@
                   <view class='teacher_name'>Amish Shiravadakar</view>
              </view>
         </view>
+       <view class='teacher_list'>
+             <view class='select'>
+                 <text></text> 
+             </view>
+             <view class='teacher_main'>
+                  <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
+                  <view class='teacher_name'>Amish Shiravadakar</view>
+             </view>
+        </view>
+
+       <view class='teacher_list cli'>
+             <view class='select'>
+                 <text></text> 
+             </view>
+             <view class='teacher_main'>
+                  <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
+                  <view class='teacher_name'>Amish Shiravadakar</view>
+             </view>
+        </view>
+
+           <view class='teacher_list'>
+             <view class='select'>
+                 <text></text> 
+             </view>
+             <view class='teacher_main'>
+                  <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
+                  <view class='teacher_name'>Amish Shiravadakar</view>
+             </view>
+        </view>            
+
+
     </view>
 </view>

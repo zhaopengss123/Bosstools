@@ -60,7 +60,7 @@
     <view class='teacher'>
           <view class='teacher_tit'>老师任务情况</view>
           <view class='teacher_list' wx:for="{{ list }}" wx:key="id" >
-            <navigator url='detail/detail?teacherId={{ item.teacherId }}' >
+            <navigator url='/pages/index/detail/detail?teacherId={{ item.teacherId }}' >
              <view class='headImg'> <image src='{{ item.headImg ? item.headImg : "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/memberHeading5633.jpg" }}'></image> </view>
               <view class='teacher_text'>
               <view class='text_top'>
