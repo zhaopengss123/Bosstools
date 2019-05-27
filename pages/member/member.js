@@ -31,8 +31,8 @@ Page({
       key: 'userInfo',
       success(res) {
         that.setData({ userInfo: res.data })
-        that.getData();
-        that.getIndexData();
+         that.getData();
+         that.getIndexData();
       },
       fail(res) {
         wx.redirectTo({
@@ -58,7 +58,6 @@ Page({
 
   },
   onShow(){
-    this.setData({ tabId: 1 });
     if (this.data.userInfo.voucher != 0 && this.data.userInfo.voucher){
       this.getData();
       this.getIndexData();
@@ -70,8 +69,7 @@ Page({
   navClick(e){
     let tabId = e.currentTarget.dataset.id
     this.setData({
-      tabId,
-      nav_index:0
+      tabId
     })
     this.getData();
   },
@@ -92,6 +90,7 @@ Page({
         url: `/pages/ask/ask?teacherId=${id}&timeFlag=${timeFlag }`,
       })
     }else if(this.data.tabId == 4){
+      console.log(111111111);
       wx.navigateTo({
         url: `/pages/index/integral/integral?teacherId=${id}&count=${count}&timeFlag=${timeFlag }`,
       })
@@ -233,7 +232,7 @@ Page({
   },
   toAsk() {
     wx.navigateTo({
-      url: '/pages/ask/ask?teacherId=&timeFlag=' + this.data.times,
+      url: '/pages/ask/ask?timeFlag=' + this.data.times,
     })
   },
   toExperience() {

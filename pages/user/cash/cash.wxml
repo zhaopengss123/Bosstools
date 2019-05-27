@@ -1,0 +1,34 @@
+<view class='content'>
+    <view class='cashHeader'>
+          <view>
+              <text>{{ detail.storeTotalAmount ? detail.storeTotalAmount : 0 }}</text>
+              <text>获得总金额(元)</text>
+          </view> 
+
+          <view>
+              <text>{{ detail.storeCashAmount ? detail.storeCashAmount : 0 }}</text>
+              <text>可提现金额(元)</text>
+          </view> 
+
+          <view>
+            <navigator url='./cashtx/cashtx' hover-class=''>
+              <image src='/assets/images/cash.png'></image>
+              <text>去提现</text>
+            </navigator>  
+          </view>           
+    </view>
+
+
+    <view class='cashMain'>
+        <view class='cashList' wx:for="{{ activityList }}" wx:key="index">
+            <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/userbg1234554565.png'></image>
+            <view  class='list_main'>
+                  <view class='list_name'>{{ item.joinName }}</view>
+                  <view class='list_money'>消费金额 <text>{{ item.joinAmount }}元</text></view>
+                  <view class='list_class'>活动： <text>{{ item.activityName }}</text></view>
+                  <view class='list_class'>时间： <text>{{ item.joinTime }}</text></view>
+            </view>
+        </view>
+    </view>
+
+</view>

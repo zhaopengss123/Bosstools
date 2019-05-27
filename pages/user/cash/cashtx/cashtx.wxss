@@ -1,0 +1,67 @@
+/* pages/user/cash/cashtx/cashtx.wxss */
+page{
+  background: #FAFAFA;
+}
+.cashHeader{
+  color: #919BA5;
+  font-size:24rpx;
+  width: 670rpx;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.cashHeader  view{
+  width: auto;
+  float: left;
+  margin-top: 40rpx;
+} 
+.cashHeader  view:last-child{
+  width: auto;
+  float: right;
+} 
+.cashmoney{
+  width: 670rpx;
+  margin: 0 auto;
+  margin-top: 54rpx;
+  overflow: hidden;
+  clear: both;
+  text-align: center;
+}
+.cashfont{
+  color: #373C41;
+  font-size: 32rpx;
+}
+.money{
+  color: #6C79FB;
+  font-size: 100rpx;
+  font-weight: bold;
+  font-style: italic;
+  height: 122rpx;
+  line-height: 122rpx;
+}
+.cashBtn{
+  width: 670rpx;
+  margin: 0 auto;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  background: #6C79FB;
+  border-radius: 20rpx;
+  margin-top: 120rpx;
+}
+.footer{
+  width: 100%;
+  position: fixed;
+  bottom: 56rpx;
+  text-align: center;
+  color: #919BA5;
+  font-size: 24rpx;
+}
+.footer text{
+  color: #6C79FB;
+  text-decoration:  underline;
+}
+.cashBtn.cli{
+  background: #ccc;
+}

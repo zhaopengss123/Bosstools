@@ -8,8 +8,8 @@ Page({
   data: {
     tabId:1,
     teacherId:'',
-    dataFlag: 3,
-    dataList: []
+    dataFlag: 1,
+    dataDetail: {}
   },
 
   /**
@@ -22,10 +22,7 @@ Page({
       key: 'userInfo',
       success(res) {
         that.setData({ userInfo: res.data });
-        if (that.data.teacherId ){
           that.getTeacherData();
-        }
-        
       },
       fail(res) {
         wx.redirectTo({
@@ -44,7 +41,7 @@ Page({
     let paramJson = JSON.stringify({
       voucher: this.data.userInfo.voucher,
       timeFlag: this.data.timeFlag,
-      teacherId: this.data.teacherId,
+      teacherId: this.data.teacherId ? this.data.teacherId : null,
       dataFlag: Number(this.data.dataFlag)
     })
     Http.get('/employee/return/visit/detatiled', {
@@ -52,7 +49,7 @@ Page({
     }).then(res => {
       if (res.result == 1000) {
         this.setData({
-          dataList: res.data
+          dataDetail: res.data
         })
       } 
       wx.hideLoading();
@@ -68,9 +65,8 @@ Page({
   navClick(e){
     let dataFlag = e.currentTarget.dataset.id ;
     this.setData({  dataFlag  });
-    if( this.data.teacherId ){
-      this.getTeacherData();
-    }
+    this.getTeacherData();
+ 
   },
 
 })

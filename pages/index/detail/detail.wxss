@@ -43,7 +43,7 @@ image{
   margin: 0 auto;
 }
 .date_list{
-  width: 56rpx;
+  width: 53rpx;
   float: left;
   padding:0 16.5rpx; 
   font-size: 32rpx;
@@ -220,7 +220,7 @@ image{
 }
 .detail_tit{
   width: 100%;
-  height:44rpx;
+
   font-size:32rpx;
   font-weight:600;
   color:rgba(34,34,34,1);
@@ -312,4 +312,41 @@ swiper{
   background: #fff;
   overflow: hidden;
   height: 103rpx;
+}
+
+.norw{
+  font-size: 30rpx;
+  color: #FB6180;
+}
+.teacher_top{
+  width: 600rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  margin: 0 auto;
+  border:solid 1px #6C79FB;
+  color: #6C79FB;
+  font-size: 24rpx;
+  background: #EBECFF;
+  border-radius: 16rpx ;
+  padding: 0 35rpx;
+}
+.teacher_top view{
+  float: left;
+}
+.topList{
+  float: left;
+  font-size: 32rpx;
+  width: 99rpx;
+  line-height: 35rpx;
+  margin-top: 25rpx;
+  margin-left: 25rpx;
+
+}
+.topList view{
+    display: block;
+    text-align: right;
+    clear: both;
+}
+.topList view:last-child{
+  font-size: 24rpx;
 }

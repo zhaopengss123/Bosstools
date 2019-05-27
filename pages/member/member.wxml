@@ -1,11 +1,11 @@
 <view class='content'>
-  <view class='header'>
+  <view class='header' wx:if="{{ tabNav == 0 }}">
             <view class='headerNav'>
               <view class='navList {{ tabNav == 0 ? "cli" : "" }}' bindtap='toggleClick' data-id='0'>
                   <view>员工业绩</view>
                   <view></view>
               </view>
-              <view class='navList {{ tabNav == 1 ? "cli" : "" }}' bindtap='toggleClick' data-id='1'>
+              <view  class='navList {{ tabNav == 1 ? "cli" : "" }}' bindtap='toggleClick' data-id='1'>
                 <view>员工排名</view>
                 <view></view>
               </view>
@@ -19,7 +19,7 @@
           <view class='total_icon' bindtap='toggleFun'>!</view>
         </view>
           <view class='total_explain' wx:if="{{ toggle }}">
-              <view><text>收入：</text><text>今日门店实际完成收入和门店目标收入（包括商品、办卡、体验卡）</text></view> 
+              <view><text>办卡：</text><text>今日门店实际完成收入和门店目标收入（包括商品、办卡、体验卡）</text></view> 
               <view><text>耗卡：</text><text>今日门店实际耗卡次数和门店目标耗卡次数</text></view> 
               <view><text>线索：</text><text>今日实际获得新线索数量和门店目标新线索数量</text></view>  
                <view><text>体验卡：</text><text>今日门店售卖体验卡数量和今日门店目标售卖体验卡数量</text></view> 
@@ -29,7 +29,7 @@
              scroll-x
               style="height: 234rpx; width:2023rpx; " >
               <view class='slist' bindtap='toIncome'>
-                  <text>收入</text>
+                  <text>办卡</text>
                   <text>{{ times }}</text>
                   <text>{{ storeDetail.finishMoney }}/{{ storeDetail.expectTotalIncome }}</text>
               </view>
@@ -91,6 +91,27 @@
 
 
   <view class='memberList' wx:if="{{ tabNav == 1 }}">
+      <view class='headerNav'>
+            <view class='navList {{ tabNav == 0 ? "cli" : "" }}' bindtap='toggleClick' data-id='0'>
+                <view>员工业绩</view>
+                <view></view>
+            </view>
+            <view class='navList {{ tabNav == 1 ? "cli" : "" }}' bindtap='toggleClick' data-id='1'>
+              <view>员工排名</view>
+              <view></view>
+            </view>
+
+                    <view class='detail_tit'>
+            <view class='detail_nav'>
+                <text class='{{ nav_index == 0 ? "cli" :"" }}' data-index='0' bindtap='dateNavClick'>今日</text>
+                <text class='{{ nav_index == 1 ? "cli" :"" }}' data-index='1' bindtap='dateNavClick'>本周</text>
+                <text class='{{ nav_index == 2 ? "cli" :"" }}' data-index='2' bindtap='dateNavClick'>本月</text>
+            </view>
+      </view>
+      </view>
+
+
+
   <view class='nav'>
         <view class='nav_list {{tabId == 1? "cli" :""}}' data-id='1' bindtap='navClick'>
              <view class='nav_name'>积分排名</view> 
@@ -110,16 +131,8 @@
         </view>            
   </view>
   <view class='detail'>
-      <view class='detail_tit'>
-            <view class='detail_name'>
-              排名详情
-            </view>
-            <view class='detail_nav'>
-                <text class='{{ nav_index == 0 ? "cli" :"" }}' data-index='0' bindtap='dateNavClick'>今日</text>
-                <text class='{{ nav_index == 1 ? "cli" :"" }}' data-index='1' bindtap='dateNavClick'>本周</text>
-                <text class='{{ nav_index == 2 ? "cli" :"" }}' data-index='2' bindtap='dateNavClick'>本月</text>
-            </view>
-      </view>
+    <view class='detail_main'>
+
       <view class='detail_text' wx:if="{{ memeberList.length}}">
             <view class='detail_text_list header'> <text>名次</text> <text>姓名</text>  <text>{{ listHeader }}</text> </view>
             
@@ -133,7 +146,7 @@
       <view class='empty' wx:else>
           暂无数据
       </view>
-
+  </view>
   </view>
    </view>
 

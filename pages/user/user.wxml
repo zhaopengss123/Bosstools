@@ -12,12 +12,32 @@
       </view>
  
   </view>
-  <!-- <view class='newList'>
+
+  <view class='storeNum'>
       <view>
-          <text>消息通知</text>
+          <text>{{ storeDetail.allMemNum  }}</text>
+          <text>客户</text>
+      </view> 
+      <view>
+          <text>{{ storeDetail.effectiveNum  }}</text>
+          <text>有效会员</text>
+      </view> 
+      <view>
+          <text>{{ storeDetail.overdueNum  }}</text>
+          <text>无效会员</text>
+      </view> 
+      <view>
+          <text>{{ storeDetail.employeeNum  }}</text>
+          <text>老师</text>
+      </view>                   
+  </view>  
+
+   <view class='newList'>
+      <view bindtap='toCash'>
+          <text>管家钱包</text>
           <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/next.png'></image>
       </view>    
-  </view> -->
+  </view> 
   <view class='exit' bindtap='exit'>
       退  出
   </view>

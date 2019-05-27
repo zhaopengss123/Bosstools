@@ -469,10 +469,17 @@ image{
   margin-top: 20rpx;
   border-radius:12rpx;
 }
-
+.memberStatus{
+  width: 90rpx;
+  margin-left: 30rpx;
+  float: left;
+  font-size: 24rpx;
+  color: #919BA5;
+  height: 63rpx;
+  line-height: 63  rpx;
+}
 .card_number{
-  clear: both;
-  margin-left: 140rpx;
+  float: left;
 }
 .card_number view{
   display: inline-block;
@@ -528,4 +535,29 @@ image{
   position: absolute;
   bottom: -5rpx;
   right: -5rpx;
+}
+
+.noMemberList{
+  width: 100%;
+}
+.noMemberList image{
+  width: 332rpx;
+  height: 332rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 84rpx;
+}
+.noMemberList view{
+  width: 100%;
+  text-align: center;
+  color: #C3CDD7;
+  font-size: 24rpx;
+}
+.qxbtn{
+  width:128rpx;
+  color: #6C79FB;
+  font-size: 24rpx;
+  float: right;
+  margin-top: 12rpx;
+  text-align: center;
 }

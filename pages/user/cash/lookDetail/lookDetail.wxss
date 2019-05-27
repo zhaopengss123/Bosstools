@@ -1,0 +1,4 @@
+/* pages/user/cash/lookDetail/lookDetail.wxss */
+image{
+  width: 100%;
+}

@@ -22,10 +22,7 @@ Page({
       key: 'userInfo',
       success(res) {
         that.setData({ userInfo: res.data });
-
           that.getTeacherData();
-
-
       },
       fail(res) {
         wx.redirectTo({

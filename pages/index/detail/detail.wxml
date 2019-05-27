@@ -112,7 +112,26 @@
             <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/next.png'></image>
      </view>    -->
     </view>
-    
+    <view class='teacher_top'>
+        <view>实际/目标</view>
+        <view class='topList'>  
+            <view>{{ memberDetail.clueCounts }}/{{ memberDetail.clueNum }}</view>
+            <view>线索</view>
+        </view> 
+        <view class='topList'>  
+            <view>{{ memberDetail.callBackClue }}/{{ memberDetail.expectCallbackClue }}</view>
+            <view>回访</view>
+        </view> 
+        <view class='topList'>  
+            <view>{{ memberDetail.pravticeCounts }}/{{ memberDetail.experienceNum }}</view>
+            <view>体验</view>
+        </view> 
+        <view class='topList'>  
+            <view>{{ memberDetail.removeCount }}/{{ memberDetail.consumeCard }}</view>
+            <view>服务</view>
+        </view> 
+
+    </view>
      <view class='teacher_list' >
       <view class='headImg'> <image src='{{ memberDetail.headImage ? memberDetail.headImage : "https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/memberHeading5633.jpg" }}'></image> </view>
         <view class='teacher_text'>
@@ -123,7 +142,7 @@
             <view class='teacher_data'>耗卡 <text>{{ memberDetail.removeCount }}/{{ memberDetail.consumeCard }}</text> </view>
             <view class='teacher_data'>线索 <text>{{ memberDetail.clueCounts }}/{{ memberDetail.clueNum }}</text> </view>
             <view class='teacher_data'>体验卡 <text>{{ memberDetail.pravticeCounts }}/{{ memberDetail.experienceNum }}</text> </view>
-            <!-- <view class='teacher_data'>回访 <text>{{ memberDetail.callBackClue }}/{{ memberDetail.expectCallbackClue }}</text> </view>   -->
+             <view class='teacher_data'>回访 <text>{{ memberDetail.callBackClue }}/{{ memberDetail.expectCallbackClue }}</text> </view>   
         </view>
         <view class='text_date'>
             入职时间：{{ memberDetail.joinDate }}
@@ -216,6 +235,34 @@
             </view>
         </view>
       </view> 
+
+      <!-- 空闲时间任务 -->
+      <view class='memberDetail_list' wx:if="{{ item.type == 13 }}" >
+        <view class='list-left'>
+            <view class='list-circle'></view>
+        </view>
+        <view class='list-right'>
+            <view class='list-date'>{{ item.startTime }} </view>
+            <view class='list-detail'>
+                <view class='detail_tit'>{{ item.title }}</view>
+            </view>
+        </view>
+      </view> 
+
+      <!-- 空闲 -->
+      <view class='memberDetail_list' wx:if="{{ item.type == 14 }}" >
+        <view class='list-left'>
+            <view class='list-circle'></view>
+        </view>
+        <view class='list-right'>
+            <view class='list-date'>{{ item.startTime }}  </view>
+            <view class='list-detail'>
+                <view class='detail_tit' wx:if="{{ item.reserveMessage }}">{{ item.reserveMessage}}</view>
+                <view class='norw'>{{ item.content.content }}</view>
+            </view>
+        </view>
+      </view> 
+
     <!-- 整点记录 -->
     <view class='memberDetail_list' wx:if="{{ item.type == 9 }}" >
         <view class='list-left'>
@@ -237,6 +284,10 @@
                 </view>                 
             </view>
         </view>
+
+
+
+
       </view>
     </view>
 

@@ -1,0 +1,13 @@
+<view class='content'>
+      <view class='list' wx:for="{{ cashRecordList }}" wx:key="index">
+            <view class='list_left'>
+              <view>提现至微信零钱</view>
+              <view>{{ item.recordTime }}</view>
+            </view>
+            <view class='list_right'>
+               <view>{{ item.cashAmount }}元</view>
+               <view>{{ item.recordStat == 1 ? '提现中' : (item.recordStat == 2 ? '提现中' : (item.recordStat == 3 ? '提现成功' :(item.recordStat == 4 ? '提现失败' :'' ) )) }}</view>
+            </view>
+      </view>
+      <view wx:if="{{ !cashRecordList.length }}" class='nolist'>暂无提现记录</view>
+</view>

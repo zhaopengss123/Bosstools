@@ -1,0 +1,47 @@
+<view class='content'>
+  <view class='caseDetailHeader'>
+    <view class='main'>
+        <view>
+            <view class='img1'><image src='/assets/images/sicon1.png'></image></view>
+            <view class='cashTit'>发起提款</view>
+            <view class='cashDate'>{{ detail.recordTime }}</view>
+        </view>  
+        <view>
+            <view class='img1' wx:if="{{ detail.midleTime }}"><image src='/assets/images/sicon2.png'></image></view>
+            <view class='img1' wx:else><image src='/assets/images/nsicon2.png'></image></view>
+            <view class='cashTit'>提款审核</view>
+            <view class='cashDate'>{{ detail.midleTime }}</view>
+        </view>
+        <view>
+            <view class='img1' wx:if="{{ detail.finalTime }}"><image src='/assets/images/sicon3.png'></image></view>
+            <view class='img1' wx:else><image src='/assets/images/nsicon3.png'></image></view>
+            <view class='cashTit'>提款到账</view>
+            <view class='cashDate'>{{ detail.finalTime }}</view>
+        </view>                
+    </view> 
+      <view class='line'></view>
+  </view>
+  <view class='dmain'>
+      <view class='List'>
+            <view class='left'>提现金额</view>
+            <view class='right'>{{ detail.cashAmount }}</view>
+      </view>  
+      <view class='List'>
+            <view class='left'>类 型</view>
+            <view class='right'>{{ detail.recordType }}</view>
+      </view> 
+      <view class='List'>
+            <view class='left'>时 间</view>
+            <view class='right'>{{ detail.recordTime }}</view>
+      </view> 
+      <view class='List'>
+            <view class='left'>备 注</view>
+            <view class='right'>{{ detail.recordComment }}</view>
+      </view>              
+  </view>
+</view>
+
+    <view class='footer'>
+        <view>提现到绑定微信，1-3天内到账</view>
+        <view>绑定的微信需进行微信的实名认证 <text bindtap='lookDetail'>查看方法 ></text></view>
+    </view>

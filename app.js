@@ -42,11 +42,14 @@ App({
       d = d > 9 ? d : '0' + d;
       return  y + '-' + m + '-' + d;
   },
-  domain: 'http://192.168.1.33:8855',
-  //domain: 'http://101.200.177.83:8006/babyswim',
+   //domain: 'http://192.168.1.33:8855',
+  //domain: 'http://192.168.1.110:8855',
+ domain: 'http://101.200.177.83:8006/babyswim',
   //domain: 'https://bosstool.beibeiyue.com/babyswim',
-  userInfo:{ },
+  userInfo: { voucher:null },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    openid: null
   }
+
 })

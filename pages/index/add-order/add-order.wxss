@@ -6,18 +6,32 @@ image{
   width: 100%;
   height: 100%;
 }
-.seacher input{
+.seacher{
   width: 670rpx;
-  border: solid 1rpx #D8D8D8;
-  height: 72rpx;
-  line-height: 72rpx;
-  text-align: center;
-  display: block;
   margin: 0 auto;
-  font-size: 24rpx;
+  border: solid 1rpx #D8D8D8;
+  height: 72rpx;  
   border-radius:16rpx;
   margin-top: 30rpx;
 }
+.seacher input{
+  width: 535rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: left;
+  float: left;
+  font-size: 24rpx;
+  padding-left: 30rpx;
+}
+.seacher image{
+  width: 40rpx;
+  height: 32rpx;
+  float: right;
+  padding: 10rpx 30rpx;
+  margin: 10rpx 0;
+  border-left: solid 1px #D8D8D8;
+}
+
 .list_tit{
   color: #373C41;
   font-size: 32rpx;
@@ -148,4 +162,20 @@ image{
   position: absolute;
   bottom: -5rpx;
   right: -5rpx;
+}
+.noMember{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 100rpx;
+}
+.noMember image{
+  width: 322rpx;
+  height: 322rpx;
+  display: block;
+  margin: 0 auto;
+}
+.noMember view{
+  color: #C3CDD7;
+  font-size: 24rpx;
+  text-align: center;
 }

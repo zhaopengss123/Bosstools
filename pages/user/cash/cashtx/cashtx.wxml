@@ -1,0 +1,16 @@
+<view class='content'>
+    <view class='cashHeader'>
+        <view><navigator url='../cashOut/cashOut'>提现说明</navigator></view>
+        <view><navigator url='../cashList/cashList'>提现记录</navigator></view>
+    </view>
+    <view class='cashmoney'>
+        <view class='cashfont'>可提现金额(元)</view>
+        <view class='money'>{{ cashAmount }}</view>
+    </view>
+    <view class='cashBtn' wx:if="{{ cashAmount >= 1 }}" bindtap='cashsub'>全部提出</view>
+    <view class='cashBtn cli'>全部提出</view>
+</view>
+    <view class='footer'>
+        <view>提现到绑定微信，1-3天内到账</view>
+        <view>绑定的微信需进行微信的实名认证 <text bindtap='lookDetail'>查看方法 ></text></view>
+    </view>

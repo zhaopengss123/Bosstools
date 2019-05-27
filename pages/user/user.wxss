@@ -71,7 +71,7 @@ image{
 .newList{
   width: 670rpx;
   margin: 0 auto;
-  margin-top: 358rpx;
+  margin-top: 28rpx;
   font-size: 28rpx;
   color: #222222;
   padding: 30rpx 0;
@@ -99,7 +99,39 @@ image{
   font-size: 32rpx;
   border-radius: 20rpx;
   background: #6C79FB;
-  position: absolute;
-  bottom: 96rpx;
-  left: 40rpx;
+  margin: 40rpx auto;
+}
+
+.storeNum{
+  width:670rpx;
+  height:170rpx;
+  background:rgba(255,254,254,1);
+  box-shadow:0px 0px 8rpx 0px rgba(221,221,221,1);
+  border-radius:20rpx;
+  clear: both;
+  margin: 0 auto;
+  margin-top: 388rpx;
+}
+.storeNum view{
+  width: 165rpx;
+  float: left;
+  text-align: center;
+  border-right: solid 1rpx #EEEEEE;
+  margin-top: 30rpx;
+}
+.storeNum view:last-child{
+  border-right: none;
+}
+.storeNum view text{
+  display: block;
+}
+.storeNum view text:first-child{
+  color: #6C79FB;
+  font-size: 46rpx;
+  font-style: italic;
+  font-weight: bold;
+}
+.storeNum view text:last-child{
+  color: #373C41;
+  font-size: 28rpx;
 }

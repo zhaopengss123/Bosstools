@@ -1,0 +1,101 @@
+/* pages/user/cash/cashDetail/cashDetail.wxss */
+page{
+  background: #FAFAFA;
+}
+.caseDetailHeader{
+  width: 100%;
+  background: #FFFEFE;
+  box-shadow:0px 0px 8rpx 0px rgba(221,221,221,1);
+  overflow: hidden;
+  text-align: center;
+  height: 266rpx;
+}
+.main{
+  width: 670rpx;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 40rpx;
+}
+.main view{
+  width: 223rpx;
+  float: left;
+  overflow: hidden;
+}
+.line{
+  width: 400rpx;
+  height: 1rpx;
+  background: #EEEEEE;
+  margin: 0  auto;
+  margin-top: 60rpx;
+}
+
+.main view:nth-child(1) .img1 image{
+  width: 52rpx;
+  height: 46rpx;
+margin-top: 38rpx;
+
+}
+.main view:nth-child(2) .img1 image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 36rpx;
+  background: #FFFEFE;
+}
+.main view:nth-child(3) .img1 image{
+  width: 44rpx;
+  height: 54rpx;
+}
+.img1 image{
+  margin-top: 30rpx;
+}
+.img1{
+  width: 100%;
+  text-align: center;
+  height: 82rpx;
+}
+.cashTit{
+  margin-top: 20rpx;
+  color: #373C41;
+  font-size: 28rpx;
+}
+
+.cashDate{
+  color: #919BA5;
+  font-size: 24rpx;
+  padding-bottom: 40rpx;
+}
+.dmain{
+  width: 670rpx;
+  margin: 0 auto;
+  padding-top: 10rpx;
+}
+.List{
+  width: 100%;
+  color: #919BA5;
+  font-size: 28rpx;
+  overflow: hidden;
+  margin-top: 40rpx;
+}
+
+.left{
+  width: auto;
+  float: left;
+}
+.right{
+  width: auto;
+  float: right;
+  color: #373C41;
+}
+.footer{
+  width: 100%;
+  position: fixed;
+  bottom: 56rpx;
+  text-align: center;
+  color: #919BA5;
+  font-size: 24rpx;
+}
+.footer text{
+  color: #6C79FB;
+  text-decoration:  underline;
+}

@@ -9,7 +9,8 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.5.0",
@@ -19,6 +20,8 @@
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -136,9 +139,52 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 14,
 					"name": "预约",
 					"pathName": "pages/index/orders/orders",
+					"query": "memberId=1550085",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现1",
+					"pathName": "pages/user/cash/cash",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现2",
+					"pathName": "pages/user/cash/cashtx/cashtx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现3",
+					"pathName": "pages/user/cash/bindphone/bindphone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "提现明细",
+					"pathName": "pages/user/cash/cashDetail/cashDetail",
+					"query": "cashId=201904181028",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现记录",
+					"pathName": "pages/user/cash/cashList/cashList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现说明",
+					"pathName": "pages/user/cash/cashOut/cashOut",
+					"query": "",
 					"scene": null
 				}
 			]

@@ -1,0 +1,70 @@
+/* pages/user/cash/bindphone/bindphone.wxss */
+page{
+  background: #FAFAFA;
+}
+.ipt-box{
+  width: 670rpx;
+  height: 114rpx;
+  line-height: 114rpx;
+  margin: 0 auto;
+  padding: 0 40rpx;
+  background: #fff;
+  overflow: hidden;
+  border-bottom: solid 1rpx #DFDFDF;
+}
+.ipt-icon{
+  width: 130rpx;
+  float: left;
+  font-size: 32rpx;
+  color: #373C41;
+
+}
+input{
+  float: left;
+  height: 114rpx;
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  width: 500rpx;
+}
+.ipt-scode{
+     border-bottom: none;
+}
+.ipt-scode input{
+  width: 300rpx;
+}
+.btn-code{
+  width: 166rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  color: #fff;
+  background:rgba(108,121,251,1);
+  border-radius:14rpx;
+  float: right;
+  font-size: 24rpx;
+  margin-top: 25rpx;
+  
+}
+.btn-code.active{
+  background: #DFDFDF;
+}
+button.ipt-submit{
+  width: 670rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  color: #fff;
+  font-size: 32rpx;
+  background:rgba(108,121,251,1);
+  border-radius:20rpx; 
+  margin-top: 176rpx;
+}
+.phonefooter{
+  width: 100%;
+  position: fixed;
+  bottom: 58rpx;
+  left: 0;
+  color: #919BA5;
+  font-size: 24rpx;
+  text-align: center;
+
+}

@@ -1,6 +1,6 @@
 <view class='content'>
     <view class='integral_total'>{{ memeberList.length }}</view>
-    <view class='intefral_text'>今日耗卡</view>
+    <view class='intefral_text'>{{ timeFlag=="day"?'今日':( timeFlag=="week"?'本周':( timeFlag=="month"?'本月':'今日' ) ) }}耗卡</view>
     <view class='list'>
       <view class='data_list' wx:for = "{{ memeberList }}" wx:key="index">
           <view class='data_icon'></view>

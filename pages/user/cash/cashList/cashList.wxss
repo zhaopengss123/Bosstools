@@ -1,0 +1,43 @@
+/* pages/user/cash/cashList/cashList.wxss */
+
+.list{
+  width: 670rpx;
+  margin: 0 auto;
+  border-bottom: solid 1rpx #DFDFDF;
+  overflow: hidden;
+  padding: 36rpx 0;
+}
+.list_left{
+  width: 50%;
+  float: left;
+}
+.list_right{
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+.list_left view:nth-child(1){
+  color: #373C41;
+  font-size: 32rpx;
+}
+.list_left view:last-child{
+  color: #919BA5;
+  font-size: 24rpx;
+  margin-top: 8rpx;
+}
+.list_right view:nth-child(1){
+  color: #6C79FB;
+  font-size: 32rpx;
+}
+.list_right view:last-child{
+  color: #919BA5;
+  font-size: 24rpx;
+  margin-top: 8rpx;  
+}
+.nolist{
+  width: 100%;
+  color: #ccc;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 60rpx;
+}

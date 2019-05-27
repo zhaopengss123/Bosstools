@@ -1,0 +1,79 @@
+/* pages/user/cash/cash.wxss */
+page{
+  background: #FAFAFA;
+}
+.content{
+  width: 100%;
+  overflow: hidden;
+}
+.cashHeader{
+  width: 750rpx;
+  height: 224rpx;
+  background: #FFFEFE;
+}
+.cashHeader view{
+  width: 249rpx;
+  float: left;
+  text-align: center;
+  border-right: solid 1px #EEEEEE;
+  margin-top: 64rpx;
+}
+.cashHeader view:last-child{
+  border-right: none;
+}
+.cashHeader view:last-child image{
+  width: 44rpx;
+  height: 54rpx;
+}
+.cashHeader view text{
+  display: block;
+}
+.cashHeader view text:first-child{
+  font-size: 46rpx;
+  color: #FFBD2D;
+  font-weight: bold;
+}
+.cashHeader view text:last-child{
+  color: #373C41;
+  font-size: 24rpx;
+}
+.cashMain{
+  margin-top: 40rpx;
+}
+.cashList{
+  width: 610rpx;
+  margin:0 auto;
+  padding: 30rpx 25rpx;
+  background:rgba(255,254,254,1);
+box-shadow:0px 0px 8rpx 0px rgba(221,221,221,1);
+border-radius:16rpx;
+overflow: hidden;
+margin-bottom: 20rpx;
+}
+.cashList image{
+  width: 90rpx;
+  height: 90rpx;
+  float: left;
+  border-radius: 50%;
+}
+.list_main{
+  width: 500rpx;
+  float: left;
+  margin-left: 20rpx;
+  color: #919BA5;
+  font-size: 24rpx;
+}
+.list_name{
+  color: #373C41;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.list_money{
+  padding-bottom: 24rpx;
+}
+.list_money text{
+  color: #6C79FB;
+}
+.list_class text{
+  color: #222;
+}

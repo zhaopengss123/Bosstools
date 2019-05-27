@@ -30,7 +30,6 @@ Page({
     d = d > 9 ? d : '0' + d;
     this.setData({ selectedDate: y + '-' + m + '-' + d });
     this.datefun(0);
-    console.log(this.data.selectIndex);
     wx.getStorage({
       key: 'userInfo',
       success(res) {
@@ -178,12 +177,12 @@ Page({
         d = d > 9 ? d : '0' + d;
         res.data.joinDate = y+'-'+m+'-'+d;
         res.data.workRecord.map( (item,index) =>{
-          res.data.workRecord[index].content = JSON.parse(res.data.workRecord[index].content);
+          res.data.workRecord[index].content = res.data.workRecord[index].content ? JSON.parse(res.data.workRecord[index].content) : {};
           if(res.data.workRecord[index].content.url){
             res.data.workRecord[index].content.url = res.data.workRecord[index].content.url.split(',');
           }
         })
-      
+        console.log(res.data);
         this.setData({
           memberDetail: res.data
         })

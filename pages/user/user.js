@@ -17,8 +17,8 @@ Page({
     wx.getStorage({
       key: 'userInfo',
       success(res) {
-        that.setData({ userInfo: res.data })
-        that.getData();
+         that.setData({ userInfo: res.data })
+         that.getData();
       },
       fail() {
         wx.redirectTo({
@@ -147,5 +147,10 @@ Page({
   //下拉刷新
   onPullDownRefresh() {
     this.getData();
+  },
+  toCash(){
+    wx.navigateTo({
+      url: './cash/cash',
+    })
   }
 })

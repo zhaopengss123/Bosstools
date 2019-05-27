@@ -8,14 +8,15 @@ Page({
   data: {
     memeberList:[],
     teacherId:'',
-    count:''
+    count:'',
+    timeFlag:'day'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({ teacherId: Number(options.teacherId), count: options.count, timeFlag: options.timeFlag})
+    this.setData({ teacherId: Number(options.teacherId), count: options.count, timeFlag: options.timeFlag});
     let that = this;
     wx.getStorage({
       key: 'userInfo',

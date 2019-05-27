@@ -25,99 +25,62 @@
             </view>
       </view>
       <view class='selectDate'>
-            <view class='date1'>2019.04.02</view>
+            <view class='date1'>
+            <picker
+              mode="date"
+              value="{{startDate}}"
+              end = "{{ endDate }}"
+              bindchange="startDateChange"
+            >
+              <view class="picker">
+                {{startDate}} ▼
+              </view>
+            </picker>
+            </view>
             <view class='sefont'>至</view>
-            <view class='date2'>2019.04.04</view>
+            <view class='date2'>
+                <picker
+                  mode="date"
+                  value="{{endDate}}"
+                  start="{{startDate}}"
+                  bindchange="endDateChange"
+                >
+                  <view class="picker">
+                    {{endDate}} ▼
+                  </view>
+                </picker>           
+            </view>
       </view>
       <view class='ts' wx:if="{{ toggle }}">
           经营总计：分为门店办卡收入、商品购买收入、调整收入可能出现负数、续卡收入；新增线索数、预约数量、耗卡数量、新增会员数； 
       </view>
 
-      <view class='amount'>
+      <view class='amount' wx:for="{{ list }}" wx:key="index">
             <view class='amountTit'>
-                  <view>经营总计<text>¥62354.12</text></view>
-                  <view>2019.04.02</view>
+                  <view>经营总计<text></text></view>
+                  <view>{{ item.date }}</view>
             </view>
             <view class='amountMain'>
                   <view class='amountList'>
                       <view>办卡收入</view>
-                      <view>¥992.11</view>
+                      <view>¥{{ item.applyCardMouey ? item.applyCardMouey : 0 }}</view>
                   </view> 
                   <view class='amountList'>
                       <view>商品收入</view>
-                      <view>¥22</view>
+                      <view>¥{{ item.commodityMoney ? item.commodityMoney : 0 }}</view>
                   </view> 
                   <view class='amountList'>
                       <view>调整收入</view>
-                      <view>¥-191.23</view>
+                      <view>¥{{ item.adjustMoney ? item.adjustMoney : 0 }}</view>
                   </view> 
                   <view class='amountList'>
                       <view>续卡收入</view>
-                      <view>¥992.11</view>
-                  </view>
-
-                  <view class='amountList'>
-                      <view>办卡收入</view>
-                      <view>¥992.11</view>
-                  </view> 
-                  <view class='amountList'>
-                      <view>商品收入</view>
-                      <view>¥22</view>
-                  </view> 
-                  <view class='amountList'>
-                      <view>调整收入</view>
-                      <view>¥-191.23</view>
-                  </view> 
-                  <view class='amountList'>
-                      <view>续卡收入</view>
-                      <view>¥992.11</view>
-                  </view>                        
-
+                      <view>¥{{ item.renewalMoney ? item.renewalMoney : 0  }}</view>
+                  </view>                       
             </view>
       </view>
+ 
 
-      <view class='amount'>
-            <view class='amountTit'>
-                  <view>经营总计<text>¥62354.12</text></view>
-                  <view>2019.04.02</view>
-            </view>
-            <view class='amountMain'>
-                  <view class='amountList'>
-                      <view>办卡收入</view>
-                      <view>¥992.11</view>
-                  </view> 
-                  <view class='amountList'>
-                      <view>商品收入</view>
-                      <view>¥22</view>
-                  </view> 
-                  <view class='amountList'>
-                      <view>调整收入</view>
-                      <view>¥-191.23</view>
-                  </view> 
-                  <view class='amountList'>
-                      <view>续卡收入</view>
-                      <view>¥992.11</view>
-                  </view>
-
-                  <view class='amountList'>
-                      <view>办卡收入</view>
-                      <view>¥992.11</view>
-                  </view> 
-                  <view class='amountList'>
-                      <view>商品收入</view>
-                      <view>¥22</view>
-                  </view> 
-                  <view class='amountList'>
-                      <view>调整收入</view>
-                      <view>¥-191.23</view>
-                  </view> 
-                  <view class='amountList'>
-                      <view>续卡收入</view>
-                      <view>¥992.11</view>
-                  </view>                        
-
-            </view>
-      </view>
 
 
   </view>
@@ -127,40 +90,51 @@
       <view class='detail_tit'>
             <view class='detail_name'>
               <text>预约记录</text>
-              <view class='add_icon'></view>
+              <view class='add_icon' bindtap='addOrder'></view>
             </view>
             <view class='detail_nav'>
-                <text class='{{ nav_index == 0 ? "cli" :"" }}' data-index='0' bindtap='dateNavClick'>今天</text>
-                <text class='{{ nav_index == 1 ? "cli" :"" }}' data-index='1' bindtap='dateNavClick'>明天</text>
-                <text class='{{ nav_index == 2 ? "cli" :"" }}' data-index='2' bindtap='dateNavClick'>未来七日</text>
+                <text class='{{ store_index == 1 ? "cli" :"" }}' data-index='1' bindtap='storeDateNavClick'>今天</text>
+                <text class='{{ store_index == 2 ? "cli" :"" }}' data-index='2' bindtap='storeDateNavClick'>明天</text>
+                <text class='{{ store_index == 3 ? "cli" :"" }}' data-index='3' bindtap='storeDateNavClick'>未来七日</text>
             </view>
       </view>
       <view class='orderMain'>
-          <view class='order_list'>
+          <view class='order_list' wx:for="{{ memberlist }}" wx:key="index">
               <view class='order_img'>
-                  <image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image>
+                  <image src='{{ item.imagePath }}'></image>
                   <view><image src='/assets/images/memberIcon.png'></image></view>
               </view>
               <view class='order_detail'>
                   <view class='order_tit'>
-                      <view class='order_name'>Samuil （xiaoming）</view>
-                      <view class='order_label'> <text>女孩</text> <text>男孩</text> </view>
+                      <view class='order_name'>{{ item.babyName }}<text wx:if="{{ item.nickName }}">({{ item.nickName }})</text></view>
+                      <view class='order_label'> <text>{{ item.babyType }}</text><text>{{ item.sex }}孩</text></view>
+                     
                   </view>
-                  <view class='order_btn'>联系家长</view>
+                  <view class='order_btn'  bindtap='totell' data-phone="{{ item.memberPhone }}">联系家长</view>
+                  <view class='qxbtn'  bindtap='qxbtn' data-reserveId="{{ item.reserveId }}">撤销预约</view>
+              </view>
+              <view  style="overflow:hidden; clear:both;">
+              <view class="memberStatus">
+               {{ item.reserveStat == 0 ? '预约中' :(item.reserveStat == 1 ? '已撤销' : (item.reserveStat == 2 ? '已完成' :  '已服务') ) }}
               </view>
               <view class='card_number'>
-                  <view>剩余卡次<text>20次</text></view>
-                  <view>剩余金额<text>100元</text></view>
+                  <view>剩余卡次<text>{{ item.cardTimes }}次</text></view>
               </view>
-          
+              </view>
           <view class='order_teacher'>
-              <view class='teacher_img'><image src='https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/eadc7765f00152d3682bea9e77dad0459c6b35cd104fe-78GRQD_fw658%402x.png'></image></view>
-              <view class='teacher_name'>小强老师</view>
-              <view class='teacher_date'>2019.04.02</view>
+              <view class='teacher_img'><image src="{{ !!item.teacherImg ?item.teacherImg : 'https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/storeManagement/memberHeading5633.jpg' }}"></image></view>
+              <view class='teacher_name'>{{ item.teacherName }}</view>
+              <view class='teacher_date'>{{ item.reserveTime }}</view>
           </view>
           </view>
       </view>
+
+      <view class='noMemberList' wx:if="{{ !memberlist.length }}">
+          <image src='/assets/images/qs_syy.png'></image>
+          <view>暂无数据</view>
+      </view> 
 </view>
 
 
 </view>
+

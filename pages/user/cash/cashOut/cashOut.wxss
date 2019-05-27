@@ -1,0 +1,25 @@
+/* pages/user/cash/cashOut/cashOut.wxss */
+page{
+  background: #FAFAFA;
+}
+.content{
+  width: 670rpx;
+  margin: 0 auto;
+}
+.title{
+  color: #373C41;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+.main{
+  color: #919BA5;
+  font-size: 26rpx;
+  margin-top: 26rpx;
+}
+.main view{
+  margin-top: 35rpx;
+}
+.main text{
+  display: block;
+}
